@@ -1,0 +1,17 @@
+[package]
+name = "os-checker-plugin-github-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+octorust = "0.8.0-rc.1"
+
+# error handling
+eyre = "0.6.12"
+color-eyre = "0.6.3"
+
+# logger
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+tracing-error = "0.2"
+
