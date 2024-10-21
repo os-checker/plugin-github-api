@@ -12,6 +12,7 @@ async fn main() -> Result<()> {
     logger::init();
 
     let (user, repo) = ("os-checker", "os-checker");
+    let _span = error_span!("actions", user, repo).entered();
     let response = client::github()
         .path("repos")
         .arg(user)
@@ -23,8 +24,10 @@ async fn main() -> Result<()> {
     let status = response.status();
     info!(status = status.as_str());
 
-    let runs: types::WorkflowRuns = response.obj().await?;
+    let runs: types::Runs = response.obj().await?;
     dbg!(&runs);
+
+    dbg!(runs.workflow_runs[0].jobs().await?);
 
     Ok(())
 }
