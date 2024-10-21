@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 octorust = { version = "0.8.0-rc.1", features = ["httpcache"] }
 reqwest = "0.12.8"
+chrono = "0.4.38"
 
 # error handling
 eyre = "0.6.12"

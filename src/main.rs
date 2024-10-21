@@ -6,6 +6,9 @@ extern crate tracing;
 
 mod logger;
 
+mod time;
+use time::UTC8;
+
 #[tokio::main]
 async fn main() -> Result<()> {
     logger::init();
@@ -46,4 +49,8 @@ pub fn github_client() -> Result<Client> {
     let agent = concat!(env!("CARGO_PKG_NAME"), "/", env!("CARGO_PKG_VERSION"));
     let req = reqwest::Client::builder().build()?.into();
     Ok(Client::custom(agent, Credentials::Token(token), req, cache))
+}
+
+pub struct ActionRuns {
+    created_at: UTC8,
 }
