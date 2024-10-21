@@ -44,11 +44,12 @@ jobs:
           git clone https://x-access-token:${{ env.ACCESS_TOKEN }}@github.com/os-checker/database.git
           echo "成功 clone os-checker/database"
 
-          mkdir -p database/plugin/githhub-api/
-          mv tmp database/plugin/githhub-api/workflows
-          cp demo_jsons/push.sh database/plugin/githhub-api/
-
           cd database
           git switch ${{ env.DATABASE }}
-          bash database/plugin/githhub-api/push.sh
+
+          mkdir -p plugin/githhub-api/
+          mv ../tmp plugin/githhub-api/workflows
+          cp ../demo_jsons/push.sh plugin/githhub-api/
+
+          bash plugin/githhub-api/push.sh
 
