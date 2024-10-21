@@ -53,7 +53,18 @@ impl Run {
         let response = self.req_jobs().send().await?;
         response.obj().await.with_context(|| "Failed to get jobs.")
     }
+
+    pub fn duration_sec(&self) -> i64 {
+        duration_sec(self.created_at, self.updated_at)
+    }
 }
+
+fn duration_sec(earlier: Timestamp, later: Timestamp) -> i64 {
+    later.duration_since(earlier).as_secs()
+}
+
+// https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2022-11-28#download-workflow-run-logs
+// https://api.github.com/repos/OWNER/REPO/actions/runs/RUN_ID/logs => logs in .zip
 
 #[derive(Debug, Deserialize)]
 pub struct Jobs {
@@ -75,6 +86,15 @@ pub struct Job {
     pub id: usize,
 }
 
+impl Job {
+    pub fn duration_sec(&self) -> i64 {
+        duration_sec(self.started_at, self.completed_at)
+    }
+}
+
+// https://docs.github.com/en/rest/actions/workflow-jobs?apiVersion=2022-11-28#download-job-logs-for-a-workflow-run
+// https://api.github.com/repos/OWNER/REPO/actions/jobs/JOB_ID/logs => single txt
+
 #[derive(Debug, Deserialize)]
 pub struct Step {
     pub name: String,
@@ -83,4 +103,10 @@ pub struct Step {
     pub number: usize,
     pub started_at: Timestamp,
     pub completed_at: Timestamp,
+}
+
+impl Step {
+    pub fn duration_sec(&self) -> i64 {
+        duration_sec(self.started_at, self.completed_at)
+    }
 }
