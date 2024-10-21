@@ -29,6 +29,8 @@ pub struct Run {
     pub event: String,
     pub status: String,
     pub conclusion: String,
+    pub run_attempt: usize,
+    pub run_started_at: Timestamp,
     pub created_at: Timestamp,
     pub updated_at: Timestamp,
     #[serde(default)]
@@ -105,9 +107,9 @@ pub struct Job {
     pub conclusion: String,
     pub created_at: Timestamp,
     pub started_at: Timestamp,
+    pub completed_at: Timestamp,
     #[serde(default)]
     pub duration_sec: i64,
-    pub completed_at: Timestamp,
     pub steps: Vec<Step>,
     pub id: usize,
 }
