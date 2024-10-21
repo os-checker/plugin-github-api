@@ -1,0 +1,23 @@
+name: Run plugin-github-api
+
+on:
+  push:
+    branches: [ main, feat/* ]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  RUST_LOG: info
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install plugin-github-api
+        run: cargo install --path .
+
+      - name: Run plugin-github-api
+        run: |
+          os-checker-plugin-github-api demo_jsons/list.json
+          ls -alh tmp
