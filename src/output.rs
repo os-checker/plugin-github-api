@@ -63,9 +63,10 @@ impl Workflows {
 
     pub fn to_json(&self) -> Result<()> {
         let base = "tmp";
-        _ = std::fs::create_dir(base);
+        let mut path = camino::Utf8PathBuf::from_iter([base, &self.user]);
+        std::fs::create_dir_all(&path)?;
 
-        let mut path = camino::Utf8PathBuf::from_iter([base, &self.user, &self.repo]);
+        path.push(&self.repo);
         path.set_extension("json");
 
         let writer = std::fs::File::create(path)?;
