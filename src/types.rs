@@ -20,4 +20,12 @@ pub struct WorkflowRun {
     pub conclusion: String,
     pub created_at: Timestamp,
     pub updated_at: Timestamp,
+    // "pull_requests": [], https://docs.rs/octorust/latest/octorust/types/struct.WorkflowRun.html#structfield.pull_requests
+    pub actor: Actor,
+    pub triggering_actor: Actor,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Actor {
+    login: String,
 }
