@@ -1,8 +1,10 @@
+#![allow(dead_code)]
+
 use crate::{client::github, Result};
 use eyre::Context;
 use github_v3::Builder;
 use jiff::Timestamp;
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Runs {
@@ -12,7 +14,7 @@ pub struct Runs {
 
 #[derive(Debug, Deserialize)]
 pub struct Actor {
-    login: String,
+    pub login: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -20,6 +22,7 @@ pub struct Run {
     pub name: String,
     pub head_branch: String,
     pub head_sha: String,
+    pub head_commit: HeadCommit,
     #[serde(rename(deserialize = "display_title"))]
     pub title: String,
     pub html_url: String,
@@ -34,6 +37,12 @@ pub struct Run {
     pub id: usize,
     pub jobs_url: String,
     pub logs_url: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct HeadCommit {
+    pub message: String,
+    pub timestamp: Timestamp,
 }
 
 const PREFIX: &str = "https://api.github.com/";
