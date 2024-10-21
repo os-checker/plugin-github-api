@@ -49,6 +49,7 @@ jobs:
           git switch ${{ env.DATABASE }}
 
           mkdir -p plugin/githhub-api/
+          rm -rf plugin/githhub-api/workflows
           mv ../tmp plugin/githhub-api/workflows
           cp ../demo_jsons/push.sh plugin/githhub-api/
 
