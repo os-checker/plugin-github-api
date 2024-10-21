@@ -1,5 +1,5 @@
 use eyre::Result;
-use octorust::{auth::Credentials, types::WorkflowRunStatus, Client};
+use octorust::{auth::Credentials, http_cache::HttpCache, types::WorkflowRunStatus, Client};
 
 #[macro_use]
 extern crate tracing;
@@ -10,8 +10,7 @@ mod logger;
 async fn main() -> Result<()> {
     logger::init();
 
-    let token = std::env::var("GH_TOKEN")?;
-    let github = Client::new(String::from("user-agent-name"), Credentials::Token(token))?;
+    let github = github_client()?;
     let actions = github.actions();
 
     let (user, repo) = ("os-checker", "os-checker");
@@ -39,4 +38,12 @@ async fn main() -> Result<()> {
     }
 
     Ok(())
+}
+
+pub fn github_client() -> Result<Client> {
+    let cache = <dyn HttpCache>::in_dir(std::path::Path::new("tmp"));
+    let token = std::env::var("GH_TOKEN")?;
+    let agent = concat!(env!("CARGO_PKG_NAME"), "/", env!("CARGO_PKG_VERSION"));
+    let req = reqwest::Client::builder().build()?.into();
+    Ok(Client::custom(agent, Credentials::Token(token), req, cache))
 }
