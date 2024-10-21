@@ -4,27 +4,26 @@ use crate::{client::github, Result};
 use eyre::Context;
 use github_v3::Builder;
 use jiff::Timestamp;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Runs {
     pub total_count: usize,
     pub workflow_runs: Vec<Run>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Actor {
     pub login: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Run {
     pub name: String,
     pub head_branch: String,
     pub head_sha: String,
     pub head_commit: HeadCommit,
-    #[serde(rename(deserialize = "display_title"))]
-    pub title: String,
+    pub display_title: String,
     pub html_url: String,
     pub event: String,
     pub status: String,
@@ -39,7 +38,7 @@ pub struct Run {
     pub logs_url: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct HeadCommit {
     pub message: String,
     pub timestamp: Timestamp,
@@ -75,13 +74,13 @@ fn duration_sec(earlier: Timestamp, later: Timestamp) -> i64 {
 // https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2022-11-28#download-workflow-run-logs
 // https://api.github.com/repos/OWNER/REPO/actions/runs/RUN_ID/logs => logs in .zip
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Jobs {
     pub total_count: usize,
     pub jobs: Vec<Job>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Job {
     pub workflow_name: String,
     pub head_branch: String,
@@ -104,7 +103,7 @@ impl Job {
 // https://docs.github.com/en/rest/actions/workflow-jobs?apiVersion=2022-11-28#download-job-logs-for-a-workflow-run
 // https://api.github.com/repos/OWNER/REPO/actions/jobs/JOB_ID/logs => single txt
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Step {
     pub name: String,
     pub status: String,
