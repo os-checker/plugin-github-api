@@ -31,6 +31,7 @@ impl Workflows {
 
     pub async fn new(user: &str, repo: &str) -> Result<Self> {
         let _span = error_span!("Workflows", user, repo).entered();
+
         let response = crate::client::github()
             .path("repos")
             .arg(user)
@@ -39,12 +40,12 @@ impl Workflows {
             .send()
             .await?;
 
-        let status = response.status();
-        info!(status = status.as_str());
-
         let runs: Runs = response.obj().await?;
         let runs_total_count = runs.total_count;
         let workflows = Self::workflows(runs).await?;
+
+        info!(workflows.len = workflows.len());
+
         Ok(Workflows {
             user: user.to_owned(),
             repo: repo.to_owned(),

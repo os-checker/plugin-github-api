@@ -1,7 +1,7 @@
-use eyre::Result;
-
 #[macro_use]
 extern crate tracing;
+
+use eyre::Result;
 
 mod client;
 mod logger;
