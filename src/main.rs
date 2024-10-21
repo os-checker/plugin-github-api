@@ -2,7 +2,7 @@
 extern crate tracing;
 
 use eyre::{Context, ContextCompat, Result};
-use futures::{stream::FuturesUnordered, TryStreamExt};
+use futures::{stream, StreamExt, TryStreamExt};
 
 mod client;
 mod logger;
@@ -20,15 +20,15 @@ async fn main() -> Result<()> {
 
     let list = read_list(list_json.into())?;
 
-    let unordered: FuturesUnordered<_> = list
-        .iter()
+    let _: Vec<_> = stream::iter(&list)
         .map(|[user, repo]| async {
             let wf = output::Workflows::new(user, repo).await?;
             wf.to_json()?;
             eyre::Ok(())
         })
-        .collect();
-    unordered.try_for_each(|_| async { eyre::Ok(()) }).await?;
+        .buffered(10) // limit to 4 concurrent repo requests
+        .try_collect()
+        .await?;
 
     Ok(())
 }

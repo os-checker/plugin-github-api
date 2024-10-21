@@ -1,5 +1,5 @@
 use crate::{types::*, Result};
-use futures::{stream::FuturesOrdered, TryStreamExt};
+use futures::{stream, StreamExt, TryStreamExt};
 use serde::Serialize;
 use tracing::Instrument;
 
@@ -27,17 +27,16 @@ pub struct Workflows {
 
 impl Workflows {
     async fn workflows(runs: Runs) -> Result<Vec<Workflow>> {
-        let ordered: FuturesOrdered<_> = runs
-            .workflow_runs
-            .into_iter()
+        stream::iter(runs.workflow_runs)
             .map(|run| async {
                 let jobs = run.jobs().await?;
                 let mut workflow = Workflow { run, jobs };
                 workflow.check();
                 eyre::Ok(workflow)
             })
-            .collect();
-        ordered.try_collect().await
+            .buffered(4) // limit to 4 concurrent requests
+            .try_collect()
+            .await
     }
 
     pub async fn new(user: &str, repo: &str) -> Result<Self> {
