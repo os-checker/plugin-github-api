@@ -9,6 +9,14 @@ pub struct Workflow {
     jobs: Jobs,
 }
 
+impl Workflow {
+    /// fill in missing fields which are computed after deserialization
+    pub fn check(&mut self) {
+        self.run.check();
+        self.jobs.check();
+    }
+}
+
 #[derive(Debug, Serialize)]
 pub struct Workflows {
     user: String,
@@ -24,7 +32,9 @@ impl Workflows {
             .into_iter()
             .map(|run| async {
                 let jobs = run.jobs().await?;
-                eyre::Ok(Workflow { run, jobs })
+                let mut workflow = Workflow { run, jobs };
+                workflow.check();
+                eyre::Ok(workflow)
             })
             .collect();
         ordered.try_collect().await

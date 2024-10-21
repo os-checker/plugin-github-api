@@ -31,6 +31,8 @@ pub struct Run {
     pub conclusion: String,
     pub created_at: Timestamp,
     pub updated_at: Timestamp,
+    #[serde(default)]
+    pub duration_sec: i64,
     // "pull_requests": [], https://docs.rs/octorust/latest/octorust/types/struct.WorkflowRun.html#structfield.pull_requests
     pub actor: Actor,
     pub triggering_actor: Actor,
@@ -48,7 +50,7 @@ pub struct HeadCommit {
 const PREFIX: &str = "https://api.github.com/";
 
 impl Run {
-    pub fn req_jobs(&self) -> Builder {
+    fn req_jobs(&self) -> Builder {
         let path = self.jobs_url.strip_prefix(PREFIX).unwrap();
         let mut client = github();
         for arg in path.split("/") {
@@ -67,8 +69,12 @@ impl Run {
         .await
     }
 
-    pub fn duration_sec(&self) -> i64 {
+    fn duration_sec(&self) -> i64 {
         duration_sec(self.created_at, self.updated_at)
+    }
+
+    pub fn check(&mut self) {
+        self.duration_sec = self.duration_sec();
     }
 }
 
@@ -85,6 +91,12 @@ pub struct Jobs {
     pub jobs: Vec<Job>,
 }
 
+impl Jobs {
+    pub fn check(&mut self) {
+        self.jobs.iter_mut().for_each(|job| job.check());
+    }
+}
+
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Job {
     pub workflow_name: String,
@@ -93,14 +105,21 @@ pub struct Job {
     pub conclusion: String,
     pub created_at: Timestamp,
     pub started_at: Timestamp,
+    #[serde(default)]
+    pub duration_sec: i64,
     pub completed_at: Timestamp,
     pub steps: Vec<Step>,
     pub id: usize,
 }
 
 impl Job {
-    pub fn duration_sec(&self) -> i64 {
+    fn duration_sec(&self) -> i64 {
         duration_sec(self.started_at, self.completed_at)
+    }
+
+    fn check(&mut self) {
+        self.duration_sec = self.duration_sec();
+        self.steps.iter_mut().for_each(|step| step.check());
     }
 }
 
@@ -115,10 +134,16 @@ pub struct Step {
     pub number: usize,
     pub started_at: Timestamp,
     pub completed_at: Timestamp,
+    #[serde(default)]
+    pub duration_sec: i64,
 }
 
 impl Step {
-    pub fn duration_sec(&self) -> i64 {
+    fn duration_sec(&self) -> i64 {
         duration_sec(self.started_at, self.completed_at)
+    }
+
+    fn check(&mut self) {
+        self.duration_sec = self.duration_sec();
     }
 }
