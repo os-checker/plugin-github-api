@@ -5,6 +5,7 @@ on:
     branches: [ main, feat/* ]
 
 env:
+  CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   RUST_LOG: info
 
@@ -19,5 +20,7 @@ jobs:
 
       - name: Run plugin-github-api
         run: |
-          os-checker-plugin-github-api demo_jsons/list.json
+          wget https://raw.githubusercontent.com/os-checker/kern-crates.github/refs/heads/os-checker/repos-default.json
+          jq "to_entries | map(.key)" repos-default.json > list.json
+          os-checker-plugin-github-api # demo_jsons/list.json
           ls -alh tmp
