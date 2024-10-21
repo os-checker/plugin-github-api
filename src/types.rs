@@ -5,6 +5,7 @@ use eyre::Context;
 use github_v3::Builder;
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
+use tracing::Instrument;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Runs {
@@ -57,9 +58,13 @@ impl Run {
     }
 
     pub async fn jobs(&self) -> Result<Jobs> {
-        let _span = error_span!("Jobs", self.name, self.id).entered();
-        let response = self.req_jobs().send().await?;
-        response.obj().await.with_context(|| "Failed to get jobs.")
+        let span = error_span!("Jobs", self.name, self.id);
+        async move {
+            let response = self.req_jobs().send().await?;
+            response.obj().await.with_context(|| "Failed to get jobs.")
+        }
+        .instrument(span)
+        .await
     }
 
     pub fn duration_sec(&self) -> i64 {

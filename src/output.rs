@@ -1,6 +1,7 @@
 use crate::{types::*, Result};
 use futures::{stream::FuturesOrdered, TryStreamExt};
 use serde::Serialize;
+use tracing::Instrument;
 
 #[derive(Debug, Serialize)]
 pub struct Workflow {
@@ -30,20 +31,26 @@ impl Workflows {
     }
 
     pub async fn new(user: &str, repo: &str) -> Result<Self> {
-        let _span = error_span!("Workflows", user, repo).entered();
+        let span = error_span!("Workflows", user, repo);
 
-        let response = crate::client::github()
-            .path("repos")
-            .arg(user)
-            .arg(repo)
-            .path("actions/runs")
-            .send()
-            .await?;
+        let (runs_total_count, workflows) = async move {
+            let response = crate::client::github()
+                .path("repos")
+                .arg(user)
+                .arg(repo)
+                .path("actions/runs")
+                .send()
+                .await?;
 
-        let runs: Runs = response.obj().await?;
-        let runs_total_count = runs.total_count;
-        let workflows = Self::workflows(runs).await?;
+            let runs: Runs = response.obj().await?;
+            let runs_total_count = runs.total_count;
+            let workflows = Self::workflows(runs).await?;
+            eyre::Ok((runs_total_count, workflows))
+        }
+        .instrument(span.clone())
+        .await?;
 
+        let _span = span.entered();
         info!(workflows.len = workflows.len());
 
         Ok(Workflows {
