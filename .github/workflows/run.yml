@@ -11,6 +11,7 @@ env:
   RUST_LOG: info
   # database branch
   DATABASE: debug
+  BOT: 1
 
 jobs:
   run:
