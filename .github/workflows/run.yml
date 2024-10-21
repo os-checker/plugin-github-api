@@ -19,6 +19,7 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/os-checker/kern-crates.github/refs/heads/os-checker/repos-default.json
           jq "to_entries | map(.key)" repos-default.json > list.json
+          tree --help
           tree --gitignore -h
 
       - name: Install plugin-github-api
@@ -27,4 +28,4 @@ jobs:
       - name: Run plugin-github-api
         run: |
           os-checker-plugin-github-api # demo_jsons/list.json
-          tree --gitignore -h
+          tree --gitignore -h tmp
