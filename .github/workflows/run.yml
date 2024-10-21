@@ -15,12 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Generate list.json
+        run: |
+          wget https://raw.githubusercontent.com/os-checker/kern-crates.github/refs/heads/os-checker/repos-default.json
+          jq "to_entries | map(.key)" repos-default.json > list.json
+          tree --gitignore -h
+
       - name: Install plugin-github-api
         run: cargo install --path .
 
       - name: Run plugin-github-api
         run: |
-          wget https://raw.githubusercontent.com/os-checker/kern-crates.github/refs/heads/os-checker/repos-default.json
-          jq "to_entries | map(.key)" repos-default.json > list.json
           os-checker-plugin-github-api # demo_jsons/list.json
-          ls -alh tmp
+          tree --gitignore -h
