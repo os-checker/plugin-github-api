@@ -88,7 +88,6 @@ pub struct Jobs {
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Job {
     pub workflow_name: String,
-    pub head_branch: String,
     pub html_url: String,
     pub status: String,
     pub conclusion: String,
