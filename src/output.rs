@@ -65,8 +65,9 @@ impl Workflows {
         let base = "tmp";
         _ = std::fs::create_dir(base);
 
-        let file = format!("{}_{}.json", self.user, self.repo);
-        let path = camino::Utf8PathBuf::from_iter([base, &file]);
+        let mut path = camino::Utf8PathBuf::from_iter([base, &self.user, &self.repo]);
+        path.set_extension("json");
+
         let writer = std::fs::File::create(path)?;
         serde_json::to_writer_pretty(writer, self)?;
 
