@@ -49,6 +49,6 @@ jobs:
           mv tmp database/plugin/githhub-api/workflows
 
           cd database
-          git switch ${{ env.database }}
+          git switch ${{ env.DATABASE }}
           bash push.sh
 
