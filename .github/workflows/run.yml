@@ -35,6 +35,8 @@ jobs:
           tree --gitignore -h tmp
 
       - name: Push to database
+        env:
+          WORKFLOWS_PATH: plugin/github-api/workflows
         run: |
           git config --global user.name "zjp-CN"
           git config --global user.email "jiping_zhou@foxmail.com"
@@ -48,10 +50,10 @@ jobs:
           cd database
           git switch ${{ env.DATABASE }}
 
-          mkdir -p plugin/githhub-api/
-          rm -rf plugin/githhub-api/workflows
-          mv ../tmp plugin/githhub-api/workflows
-          cp ../demo_jsons/push.sh plugin/githhub-api/
+          rm -rf ${{ env.WORKFLOWS_PATH }}
+          mkdir -p ${{ env.WORKFLOWS_PATH }}
+          mv ../tmp ${{ env.WORKFLOWS_PATH }}
+          cp ../demo_jsons/push.sh ${{ env.WORKFLOWS_PATH }}
 
           bash plugin/githhub-api/push.sh
 
