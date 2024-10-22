@@ -50,7 +50,7 @@ jobs:
           cd database
           git switch ${{ env.DATABASE }}
 
-          rm -rf ${{ env.WORKFLOWS_PATH }}
+          rm -rf plugin
           mkdir -p ${{ env.WORKFLOWS_PATH }}
           mv ../tmp ${{ env.WORKFLOWS_PATH }}
           cp ../demo_jsons/push.sh ${{ env.WORKFLOWS_PATH }}
