@@ -55,5 +55,5 @@ jobs:
           mv ../tmp ${{ env.WORKFLOWS_PATH }}
           cp ../demo_jsons/push.sh ${{ env.WORKFLOWS_PATH }}
 
-          bash plugin/githhub-api/push.sh
+          bash ${{ env.WORKFLOWS_PATH }}/push.sh
 
