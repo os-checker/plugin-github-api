@@ -101,6 +101,7 @@ impl Jobs {
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Job {
+    pub name: String,
     pub workflow_name: String,
     pub html_url: String,
     pub status: String,
