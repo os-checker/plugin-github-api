@@ -7,6 +7,7 @@ use futures::{stream, StreamExt, TryStreamExt};
 mod client;
 mod logger;
 mod output;
+mod summary;
 mod types;
 
 #[tokio::main]

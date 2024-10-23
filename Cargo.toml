@@ -14,6 +14,7 @@ serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
 
 camino = "1"
+indexmap = "2"
 
 # error handling
 eyre = "0.6"

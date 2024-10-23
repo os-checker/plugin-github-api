@@ -1,12 +1,12 @@
 use crate::{types::*, Result};
 use futures::{stream, StreamExt, TryStreamExt};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use tracing::Instrument;
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Workflow {
-    run: Run,
-    jobs: Jobs,
+    pub run: Run,
+    pub jobs: Jobs,
 }
 
 impl Workflow {
@@ -17,12 +17,12 @@ impl Workflow {
     }
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Workflows {
-    user: String,
-    repo: String,
-    runs_total_count: usize,
-    workflows: Vec<Workflow>,
+    pub user: String,
+    pub repo: String,
+    pub runs_total_count: usize,
+    pub workflows: Vec<Workflow>,
 }
 
 impl Workflows {

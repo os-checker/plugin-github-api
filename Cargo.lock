@@ -780,6 +780,7 @@ dependencies = [
  "eyre",
  "futures",
  "github_v3",
+ "indexmap",
  "jiff",
  "serde",
  "serde_json",
