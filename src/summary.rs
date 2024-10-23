@@ -17,12 +17,12 @@ pub struct LastWorkflow {
     pub updated_at: Timestamp,
     /// A substraction from above timestamps: possible incorrect in many ways though.
     pub duration_sec: i64,
-    pub status: String,
-    pub conclusion: String,
+    pub completed: bool,
+    pub success: bool,
     pub head_branch: String,
     pub head_sha: String,
     pub head_commit: HeadCommit,
-    pub workflow: Workflow,
+    pub workflows: Vec<Workflow>,
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -67,9 +67,9 @@ impl Summary {
             (b[0].run.updated_at, b[0].run.created_at)
                 .cmp(&(a[0].run.updated_at, a[0].run.created_at))
         });
-        let wf = &groups[0][0];
+        let wf = &groups[0];
 
-        let run = &wf.run;
+        let run = &wf[0].run;
         let created_at = run.created_at;
         let updated_at = run.updated_at;
 
@@ -77,12 +77,13 @@ impl Summary {
             created_at,
             updated_at,
             duration_sec: duration_sec(created_at, updated_at),
-            status: run.status.clone(),
-            conclusion: run.conclusion.clone(),
+            // must check all latset data
+            completed: wf.iter().all(|w| w.run.status == "completed"),
+            success: wf.iter().all(|w| w.run.conclusion == "success"),
             head_branch: run.head_branch.clone(),
             head_sha: run.head_sha.clone(),
             head_commit: run.head_commit.clone(),
-            workflow: (*wf).clone(),
+            workflows: wf.iter().map(|w| (*w).clone()).collect(),
         });
         summary
     }
