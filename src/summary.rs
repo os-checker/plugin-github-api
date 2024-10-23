@@ -1,12 +1,12 @@
-use std::cmp::Reverse;
-
 use crate::{
     output::{Workflow, Workflows},
     types::{duration_sec, HeadCommit},
+    Result, BASE_DIR,
 };
 use indexmap::IndexMap;
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
+use std::cmp::{Ordering, Reverse};
 
 /// Latest workflow is the latest updated (first) & latest created (second) workflow.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -31,14 +31,24 @@ pub struct Summary {
     pub repo: String,
     // total count of workflow runs
     pub runs: usize,
-    pub last: LastWorkflow,
+    pub last: Option<LastWorkflow>,
 }
 
 impl Summary {
     pub fn new(workflows: &Workflows) -> Summary {
-        let wfs = &workflows.workflows;
+        let mut summary = Summary {
+            user: workflows.user.clone(),
+            repo: workflows.repo.clone(),
+            runs: workflows.runs_total_count,
+            last: None,
+        };
+
+        if workflows.runs_total_count == 0 {
+            return summary;
+        }
 
         // group b head_sha
+        let wfs = &workflows.workflows;
         let mut groups = IndexMap::<&str, Vec<&Workflow>>::with_capacity(wfs.len());
         for wf in wfs {
             let sha = wf.run.head_sha.as_str();
@@ -63,21 +73,40 @@ impl Summary {
         let created_at = run.created_at;
         let updated_at = run.updated_at;
 
-        Summary {
-            user: workflows.user.clone(),
-            repo: workflows.repo.clone(),
-            runs: workflows.runs_total_count,
-            last: LastWorkflow {
-                created_at,
-                updated_at,
-                duration_sec: duration_sec(created_at, updated_at),
-                status: run.status.clone(),
-                conclusion: run.conclusion.clone(),
-                head_branch: run.head_branch.clone(),
-                head_sha: run.head_sha.clone(),
-                head_commit: run.head_commit.clone(),
-                workflow: (*wf).clone(),
-            },
+        summary.last = Some(LastWorkflow {
+            created_at,
+            updated_at,
+            duration_sec: duration_sec(created_at, updated_at),
+            status: run.status.clone(),
+            conclusion: run.conclusion.clone(),
+            head_branch: run.head_branch.clone(),
+            head_sha: run.head_sha.clone(),
+            head_commit: run.head_commit.clone(),
+            workflow: (*wf).clone(),
+        });
+        summary
+    }
+
+    pub fn cmp_by_timestamp(&self, other: &Self) -> Ordering {
+        let timestamp_a = self.last.as_ref().map(|l| (l.updated_at, l.created_at));
+        let timestamp_b = other.last.as_ref().map(|l| (l.updated_at, l.created_at));
+        match [timestamp_a, timestamp_b] {
+            // alphabetic sort if neither has workflow runs
+            [None, None] => (&self.user, &self.repo).cmp(&(&other.user, &other.repo)),
+            // Either with a workflow run wins
+            [None, Some(_)] => Ordering::Greater,
+            [Some(_), None] => Ordering::Less,
+            // latest timestamp wins
+            [Some(a), Some(b)] => b.cmp(&a),
         }
     }
+}
+
+pub fn to_json(summaries: &[Summary]) -> Result<()> {
+    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, "summaries.json"]);
+
+    let writer = std::fs::File::create(path)?;
+    serde_json::to_writer_pretty(writer, summaries)?;
+
+    Ok(())
 }

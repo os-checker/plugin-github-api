@@ -1,4 +1,4 @@
-use crate::{types::*, Result};
+use crate::{types::*, Result, BASE_DIR};
 use futures::{stream, StreamExt, TryStreamExt};
 use serde::{Deserialize, Serialize};
 use tracing::Instrument;
@@ -71,8 +71,7 @@ impl Workflows {
     }
 
     pub fn to_json(&self) -> Result<()> {
-        let base = "tmp";
-        let mut path = camino::Utf8PathBuf::from_iter([base, &self.user]);
+        let mut path = camino::Utf8PathBuf::from_iter([BASE_DIR, &self.user]);
         std::fs::create_dir_all(&path)?;
 
         path.push(&self.repo);

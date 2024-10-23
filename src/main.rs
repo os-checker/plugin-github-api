@@ -3,12 +3,15 @@ extern crate tracing;
 
 use eyre::{Context, ContextCompat, Result};
 use futures::{stream, StreamExt, TryStreamExt};
+use summary::Summary;
 
 mod client;
 mod logger;
 mod output;
 mod summary;
 mod types;
+
+const BASE_DIR: &str = "tmp";
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -21,15 +24,19 @@ async fn main() -> Result<()> {
 
     let list = read_list(list_json.into())?;
 
-    let _: Vec<_> = stream::iter(&list)
+    let mut summaries: Vec<_> = stream::iter(&list)
         .map(|[user, repo]| async {
             let wf = output::Workflows::new(user, repo).await?;
             wf.to_json()?;
-            eyre::Ok(())
+
+            eyre::Ok(Summary::new(&wf))
         })
         .buffered(10) // limit to 4 concurrent repo requests
         .try_collect()
         .await?;
+
+    summaries.sort_unstable_by(Summary::cmp_by_timestamp);
+    summary::to_json(&summaries)?;
 
     Ok(())
 }
