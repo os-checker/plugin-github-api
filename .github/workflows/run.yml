@@ -22,7 +22,7 @@ jobs:
       - name: Generate list.json
         run: |
           wget https://raw.githubusercontent.com/os-checker/kern-crates.github/refs/heads/os-checker/repos-default.json
-          jq "to_entries | map(.key)" repos-default.json > list.json
+          jq 'to_entries | map(.key) + ["os-checker/os-checker", "os-checker/os-checker.github.io"]' repos-default.json > list.json
           tree --help
           tree --gitignore -h
 
