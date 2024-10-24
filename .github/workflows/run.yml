@@ -6,7 +6,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   RUST_LOG: info
   # database branch
