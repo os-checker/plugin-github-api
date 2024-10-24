@@ -6,7 +6,7 @@ use crate::{
 use indexmap::IndexMap;
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
-use std::cmp::{Ordering, Reverse};
+use std::cmp::Ordering;
 
 /// Latest workflow is the latest updated (first) & latest created (second) workflow.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -58,15 +58,14 @@ impl Summary {
                 .or_insert_with(|| vec![wf]);
         }
 
-        // sort each workflow with latest first
-        for v in groups.values_mut() {
-            v.sort_by_key(|wf| Reverse((wf.run.updated_at, wf.run.created_at)));
-        }
-        // index 0 means the latest workflow in each group
         groups.sort_unstable_by(|_, a, _, b| {
-            (b[0].run.updated_at, b[0].run.created_at)
-                .cmp(&(a[0].run.updated_at, a[0].run.created_at))
+            let a_updated = a.iter().map(|a| a.run.updated_at).max().unwrap();
+            let a_created = a.iter().map(|a| a.run.created_at).max().unwrap();
+            let b_updated = b.iter().map(|b| b.run.updated_at).max().unwrap();
+            let b_created = b.iter().map(|b| b.run.created_at).max().unwrap();
+            (b_updated, b_created).cmp(&(a_updated, a_created))
         });
+        // index 0 means the latest workflow in each group
         let wf = &groups[0];
 
         let run = &wf[0].run;
