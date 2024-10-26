@@ -1,6 +1,8 @@
 name: Run plugin-github-api
 
 on:
+  schedule:
+    - cron: '0 0/3 * * *'
   push:
     branches: [ main, feat/* ]
 
