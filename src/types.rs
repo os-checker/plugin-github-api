@@ -133,7 +133,7 @@ impl Job {
 pub struct Step {
     pub name: String,
     pub status: String,
-    pub conclusion: String,
+    pub conclusion: Option<String>,
     pub number: usize,
     pub started_at: Timestamp,
     pub completed_at: Timestamp,
