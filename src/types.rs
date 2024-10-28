@@ -107,7 +107,7 @@ pub struct Job {
     pub conclusion: Option<String>,
     pub created_at: Timestamp,
     pub started_at: Timestamp,
-    pub completed_at: Timestamp,
+    pub completed_at: Option<Timestamp>,
     #[serde(default)]
     pub duration_sec: i64,
     pub steps: Vec<Step>,
@@ -116,7 +116,10 @@ pub struct Job {
 
 impl Job {
     fn duration_sec(&self) -> i64 {
-        duration_sec(self.started_at, self.completed_at)
+        match self.completed_at {
+            Some(completed_at) => duration_sec(self.started_at, completed_at),
+            None => 0,
+        }
     }
 
     fn check(&mut self) {
