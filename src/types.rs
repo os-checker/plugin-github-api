@@ -104,7 +104,7 @@ pub struct Job {
     pub workflow_name: String,
     pub html_url: String,
     pub status: String,
-    pub conclusion: String,
+    pub conclusion: Option<String>,
     pub created_at: Timestamp,
     pub started_at: Timestamp,
     pub completed_at: Timestamp,
