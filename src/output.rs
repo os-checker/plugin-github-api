@@ -1,4 +1,5 @@
 use crate::{types::*, Result, BASE_DIR};
+use eyre::Context;
 use futures::{stream, StreamExt, TryStreamExt};
 use serde::{Deserialize, Serialize};
 use tracing::Instrument;
@@ -51,7 +52,10 @@ impl Workflows {
                 .send()
                 .await?;
 
-            let runs: Runs = response.obj().await?;
+            // let runs: Runs = response.obj().await?;
+            let json: serde_json::Value = response.obj().await?;
+            let runs = Runs::deserialize(&json).with_context(|| format!("json={json:#?}"))?;
+
             let runs_total_count = runs.total_count;
             let workflows = Self::workflows(runs).await?;
             eyre::Ok((runs_total_count, workflows))
