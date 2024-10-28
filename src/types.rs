@@ -135,15 +135,18 @@ pub struct Step {
     pub status: String,
     pub conclusion: Option<String>,
     pub number: usize,
-    pub started_at: Timestamp,
-    pub completed_at: Timestamp,
+    pub started_at: Option<Timestamp>,
+    pub completed_at: Option<Timestamp>,
     #[serde(default)]
     pub duration_sec: i64,
 }
 
 impl Step {
     fn duration_sec(&self) -> i64 {
-        duration_sec(self.started_at, self.completed_at)
+        match (self.started_at, self.completed_at) {
+            (Some(started_at), Some(completed_at)) => duration_sec(started_at, completed_at),
+            _ => 0,
+        }
     }
 
     fn check(&mut self) {
