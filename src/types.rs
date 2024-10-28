@@ -28,7 +28,7 @@ pub struct Run {
     pub html_url: String,
     pub event: String,
     pub status: String,
-    pub conclusion: String,
+    pub conclusion: Option<String>,
     pub run_attempt: usize,
     pub run_started_at: Timestamp,
     pub created_at: Timestamp,
