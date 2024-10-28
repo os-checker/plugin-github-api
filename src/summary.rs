@@ -78,7 +78,9 @@ impl Summary {
             duration_sec: duration_sec(created_at, updated_at),
             // must check all latset data
             completed: wf.iter().all(|w| w.run.status == "completed"),
-            success: wf.iter().all(|w| w.run.conclusion == "success"),
+            success: wf
+                .iter()
+                .all(|w| w.run.conclusion.as_deref() == Some("success")),
             head_branch: run.head_branch.clone(),
             head_sha: run.head_sha.clone(),
             head_commit: run.head_commit.clone(),
