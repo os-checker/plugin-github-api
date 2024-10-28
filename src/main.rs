@@ -56,3 +56,11 @@ fn read_list(path: &camino::Utf8Path) -> Result<Vec<[String; 2]>> {
         })
         .collect()
 }
+
+/// Display json when parse error occurs.
+async fn parse_response<T: serde::de::DeserializeOwned>(
+    response: github_v3::Response,
+) -> Result<T> {
+    let json: serde_json::Value = response.obj().await?;
+    T::deserialize(&json).with_context(|| format!("json={json:#?}"))
+}

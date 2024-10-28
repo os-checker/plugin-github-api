@@ -1,7 +1,6 @@
 #![allow(dead_code)]
 
 use crate::{client::github, Result};
-use eyre::Context;
 use github_v3::Builder;
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
@@ -65,7 +64,7 @@ impl Run {
         let span = error_span!("Jobs", self.name, self.id);
         async move {
             let response = self.req_jobs().send().await?;
-            response.obj().await.with_context(|| "Failed to get jobs.")
+            crate::parse_response(response).await
         }
         .instrument(span)
         .await
