@@ -1,8 +1,8 @@
-use crate::{
+use super::{
     output::{Workflow, Workflows},
     types::{duration_sec, HeadCommit},
-    Result, BASE_DIR,
 };
+use crate::{Result, BASE_DIR};
 use indexmap::IndexMap;
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
