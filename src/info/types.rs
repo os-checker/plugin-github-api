@@ -1,4 +1,5 @@
-use crate::Result;
+#![allow(unused)]
+use crate::{client::github, parse_response, Result};
 use jiff::Timestamp;
 use serde::Deserialize;
 
@@ -59,19 +60,34 @@ struct License {
     spdx_id: String,
 }
 
-async fn get_repo_info() -> Result<Info> {
-    let response = crate::client::github()
-        .path("repos")
-        .arg("kern-crates")
-        .arg("sparreal-os")
-        .send()
-        .await?;
-    crate::parse_response(response).await
+async fn get_repo_info(user: &str, repo: &str) -> Result<Info> {
+    let response = github().path("repos").arg(user).arg(repo).send().await?;
+    parse_response(response).await
 }
 
 #[tokio::test]
-async fn os_checker() -> Result<()> {
-    let info = get_repo_info().await?;
-    dbg!(info);
+async fn query() -> Result<()> {
+    let (user, repo) = ("arceos-org", "arceos");
+    let info = get_repo_info(user, repo).await?;
+    let contributors = get_repo_contributors(user, repo).await?;
+    dbg!(info, contributors);
     Ok(())
+}
+
+#[derive(Debug, Deserialize)]
+struct Contributor {
+    login: String,
+    r#type: String,
+    contributions: usize,
+}
+
+async fn get_repo_contributors(user: &str, repo: &str) -> Result<Vec<Contributor>> {
+    let response = github()
+        .path("repos")
+        .arg(user)
+        .arg(repo)
+        .path("contributors")
+        .send()
+        .await?;
+    parse_response(response).await
 }
