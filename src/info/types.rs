@@ -1,7 +1,9 @@
 #![allow(unused)]
-use crate::{client::github, parse_response, Result};
+use crate::{client::github, parse_response, Result, BASE_DIR};
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
+
+use super::INFO;
 
 #[derive(Debug, Deserialize, Serialize)]
 struct Info {
@@ -98,12 +100,34 @@ async fn get_repo_contributors(user: &str, repo: &str) -> Result<Vec<Contributor
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Output {
+    user: String,
+    repo: String,
     info: Info,
     contributors: Vec<Contributor>,
+}
+
+impl Output {
+    pub fn to_json(&self) -> Result<()> {
+        let mut path = camino::Utf8PathBuf::from_iter([BASE_DIR, INFO, &self.user]);
+        std::fs::create_dir_all(&path)?;
+
+        path.push(&self.repo);
+        path.set_extension("json");
+
+        let writer = std::fs::File::create(path)?;
+        serde_json::to_writer_pretty(writer, self)?;
+
+        Ok(())
+    }
 }
 
 pub async fn query(user: &str, repo: &str) -> Result<Output> {
     let info = get_repo_info(user, repo).await?;
     let contributors = get_repo_contributors(user, repo).await?;
-    Ok(Output { info, contributors })
+    Ok(Output {
+        user: user.to_owned(),
+        repo: repo.to_owned(),
+        info,
+        contributors,
+    })
 }
