@@ -11,8 +11,12 @@ struct Info {
     owner: Owner,
     description: String,
     created_at: Timestamp,
-    updated_at: Timestamp,
     pushed_at: Timestamp,
+    /// updated_at can be influenced by many other stuff, internally or externally (like someone
+    /// stars the repo), so this field is less important than pushed_at
+    ///
+    /// https://stackoverflow.com/questions/15918588/github-api-v3-what-is-the-difference-between-pushed-at-and-updated-at
+    updated_at: Timestamp,
     homepage: Option<String>,
     default_branch: String,
     /// in bytes
@@ -39,14 +43,14 @@ struct Info {
 
     topics: Vec<String>,
     language: String,
-    license: License,
+    license: Option<License>,
 }
 
 #[derive(Debug, Deserialize)]
 struct Owner {
     /// user name
     login: String,
-    /// Organization or something
+    /// Organization, User or something
     r#type: String,
 }
 
@@ -58,8 +62,8 @@ struct License {
 async fn get_repo_info() -> Result<Info> {
     let response = crate::client::github()
         .path("repos")
-        .arg("os-checker")
-        .arg("os-checker")
+        .arg("zjp-CN")
+        .arg("term-rustdoc")
         .send()
         .await?;
     crate::parse_response(response).await
