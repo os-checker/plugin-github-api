@@ -17,6 +17,8 @@ struct Info {
     /// stars the repo), so this field is less important than pushed_at
     ///
     /// https://stackoverflow.com/questions/15918588/github-api-v3-what-is-the-difference-between-pushed-at-and-updated-at
+    ///
+    /// Seems this related to events.
     updated_at: Timestamp,
     homepage: Option<String>,
     default_branch: String,

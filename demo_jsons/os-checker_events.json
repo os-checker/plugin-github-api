@@ -1,0 +1,2712 @@
+[
+  {
+    "id": "43629655412",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21113348200,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+      "before": "fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+      "commits": [
+        {
+          "sha": "9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): remove secrets.SSH_PRIVATE_KEY_GITEE",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-08T08:11:56Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43451290695",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "ref": "feat/rudra",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2024-11-03T04:49:40Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43451290472",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21022764190,
+      "size": 17,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+      "before": "8f70fb72ee129c9499839b21d0019d7e459134c7",
+      "commits": [
+        {
+          "sha": "97f16e25c23f2a6c9a3d4f18a23a18f3674f7709",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): add Rudra variant in Kind & CheckerTool",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/97f16e25c23f2a6c9a3d4f18a23a18f3674f7709"
+        },
+        {
+          "sha": "a9994d9d1009958a8e37c148609827ab334a46b1",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): install toolchain of nightly-2021-10-21",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/a9994d9d1009958a8e37c148609827ab334a46b1"
+        },
+        {
+          "sha": "0d4ea8c4de3c48f51eba5fc46c9a72d4f7a66866",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): define cmd::cargo_rudra and apply",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/0d4ea8c4de3c48f51eba5fc46c9a72d4f7a66866"
+        },
+        {
+          "sha": "b8ce77205c3e8e013c5fd699e89b02ab892035b8",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): parse output",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/b8ce77205c3e8e013c5fd699e89b02ab892035b8"
+        },
+        {
+          "sha": "fb2e8935a15c8427e29b69df444b639a807dfbfc",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(ci): install rudra from database assets",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/fb2e8935a15c8427e29b69df444b639a807dfbfc"
+        },
+        {
+          "sha": "0bc9c1bc9b64cfec7423b2bdca3e71dcb44d8185",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): run rudra for test suite",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/0bc9c1bc9b64cfec7423b2bdca3e71dcb44d8185"
+        },
+        {
+          "sha": "c64ff5864a21fbc9b7b05d7cb9f08fb963421055",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): enable Rudra checker by default",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/c64ff5864a21fbc9b7b05d7cb9f08fb963421055"
+        },
+        {
+          "sha": "33eaa1234358502ad6d7c551ff2473d17c25e52b",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): FORCE_REPO_CHECK=true",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/33eaa1234358502ad6d7c551ff2473d17c25e52b"
+        },
+        {
+          "sha": "0918adda9e97298b50213d9de331b9a44de208d9",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "fix(rudra): parse fn",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/0918adda9e97298b50213d9de331b9a44de208d9"
+        },
+        {
+          "sha": "fd8274d19448607dbc83703b2cb55a3280bdf385",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): run rudra for all repos",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/fd8274d19448607dbc83703b2cb55a3280bdf385"
+        },
+        {
+          "sha": "9aaa3ef84cc3644ad09b41fa504686b0b181c719",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/9aaa3ef84cc3644ad09b41fa504686b0b181c719"
+        },
+        {
+          "sha": "77d582fd5e46fa8a536c30fa21b5862cea6fad62",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to debug database & cache-v11.redb tag",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/77d582fd5e46fa8a536c30fa21b5862cea6fad62"
+        },
+        {
+          "sha": "226d571396a04f9bce1edae86fb6fa5bdb87584a",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): FORCE_REPO_CHECK=true",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/226d571396a04f9bce1edae86fb6fa5bdb87584a"
+        },
+        {
+          "sha": "95b783406b4ea8a52a543208f9964ebd5de2996e",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): CONFIGS: repos-ui.json",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/95b783406b4ea8a52a543208f9964ebd5de2996e"
+        },
+        {
+          "sha": "7948852b4f3f44414d5b7658ce08c2dec87a165e",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check all repos",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/7948852b4f3f44414d5b7658ce08c2dec87a165e"
+        },
+        {
+          "sha": "a31ccb67f1c25c27a66dcdbb5848128191209c17",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/a31ccb67f1c25c27a66dcdbb5848128191209c17"
+        },
+        {
+          "sha": "fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp-CN"
+          },
+          "message": "Merge pull request #162 from os-checker/feat/rudra\n\nfeat: 集成 Rudra 检测 panic safety 和 Send/Sync Variance",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/fa6e82947d3ae60ef3dafb03934f3412c7963f83"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-03T04:49:37Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43451290392",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "closed",
+      "number": 162,
+      "pull_request": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/pulls/162",
+        "id": 2159502695,
+        "node_id": "PR_kwDOMWlHo86At2Vn",
+        "html_url": "https://github.com/os-checker/os-checker/pull/162",
+        "diff_url": "https://github.com/os-checker/os-checker/pull/162.diff",
+        "patch_url": "https://github.com/os-checker/os-checker/pull/162.patch",
+        "issue_url": "https://api.github.com/repos/os-checker/os-checker/issues/162",
+        "number": 162,
+        "state": "closed",
+        "locked": false,
+        "title": "feat: 集成 Rudra 检测 panic safety 和 Send/Sync Variance",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "body": "close https://github.com/os-checker/os-checker/issues/161\r\n\r\n目前在所有 108 个仓库上，尚未检测到 Rudra 报告的错误：\r\n\r\n![截图_20241103124529](https://github.com/user-attachments/assets/52706e63-07e1-404c-8a9d-164d0aac536d)\r\n\r\ntest-suite 中 Rudra 的测例情况：\r\n\r\n![截图_20241102060634](https://github.com/user-attachments/assets/f9cd5928-2a8e-47e4-a4b7-2b9e6c89ee46)\r\n",
+        "created_at": "2024-11-03T04:49:22Z",
+        "updated_at": "2024-11-03T04:49:36Z",
+        "closed_at": "2024-11-03T04:49:36Z",
+        "merged_at": "2024-11-03T04:49:36Z",
+        "merge_commit_sha": "fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+        "assignee": null,
+        "assignees": [],
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "labels": [],
+        "milestone": null,
+        "draft": false,
+        "commits_url": "https://api.github.com/repos/os-checker/os-checker/pulls/162/commits",
+        "review_comments_url": "https://api.github.com/repos/os-checker/os-checker/pulls/162/comments",
+        "review_comment_url": "https://api.github.com/repos/os-checker/os-checker/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/162/comments",
+        "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/a31ccb67f1c25c27a66dcdbb5848128191209c17",
+        "head": {
+          "label": "os-checker:feat/rudra",
+          "ref": "feat/rudra",
+          "sha": "a31ccb67f1c25c27a66dcdbb5848128191209c17",
+          "user": {
+            "login": "os-checker",
+            "id": 175544884,
+            "node_id": "O_kgDOCnaaNA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/os-checker",
+            "html_url": "https://github.com/os-checker",
+            "followers_url": "https://api.github.com/users/os-checker/followers",
+            "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+            "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+            "organizations_url": "https://api.github.com/users/os-checker/orgs",
+            "repos_url": "https://api.github.com/users/os-checker/repos",
+            "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/os-checker/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 828983203,
+            "node_id": "R_kgDOMWlHow",
+            "name": "os-checker",
+            "full_name": "os-checker/os-checker",
+            "private": false,
+            "owner": {
+              "login": "os-checker",
+              "id": 175544884,
+              "node_id": "O_kgDOCnaaNA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/os-checker",
+              "html_url": "https://github.com/os-checker",
+              "followers_url": "https://api.github.com/users/os-checker/followers",
+              "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+              "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+              "organizations_url": "https://api.github.com/users/os-checker/orgs",
+              "repos_url": "https://api.github.com/users/os-checker/repos",
+              "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/os-checker/received_events",
+              "type": "Organization",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/os-checker/os-checker",
+            "description": "对 Rust 编写的代码运行一系列检查工具，并对结果进行报告和统计",
+            "fork": false,
+            "url": "https://api.github.com/repos/os-checker/os-checker",
+            "forks_url": "https://api.github.com/repos/os-checker/os-checker/forks",
+            "keys_url": "https://api.github.com/repos/os-checker/os-checker/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/os-checker/os-checker/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/os-checker/os-checker/teams",
+            "hooks_url": "https://api.github.com/repos/os-checker/os-checker/hooks",
+            "issue_events_url": "https://api.github.com/repos/os-checker/os-checker/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/os-checker/os-checker/events",
+            "assignees_url": "https://api.github.com/repos/os-checker/os-checker/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/os-checker/os-checker/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/os-checker/os-checker/tags",
+            "blobs_url": "https://api.github.com/repos/os-checker/os-checker/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/os-checker/os-checker/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/os-checker/os-checker/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/os-checker/os-checker/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/os-checker/os-checker/languages",
+            "stargazers_url": "https://api.github.com/repos/os-checker/os-checker/stargazers",
+            "contributors_url": "https://api.github.com/repos/os-checker/os-checker/contributors",
+            "subscribers_url": "https://api.github.com/repos/os-checker/os-checker/subscribers",
+            "subscription_url": "https://api.github.com/repos/os-checker/os-checker/subscription",
+            "commits_url": "https://api.github.com/repos/os-checker/os-checker/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/os-checker/os-checker/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/os-checker/os-checker/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/os-checker/os-checker/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/os-checker/os-checker/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/os-checker/os-checker/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/os-checker/os-checker/merges",
+            "archive_url": "https://api.github.com/repos/os-checker/os-checker/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/os-checker/os-checker/downloads",
+            "issues_url": "https://api.github.com/repos/os-checker/os-checker/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/os-checker/os-checker/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/os-checker/os-checker/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/os-checker/os-checker/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/os-checker/os-checker/labels{/name}",
+            "releases_url": "https://api.github.com/repos/os-checker/os-checker/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/os-checker/os-checker/deployments",
+            "created_at": "2024-07-15T14:14:00Z",
+            "updated_at": "2024-11-02T05:43:44Z",
+            "pushed_at": "2024-11-02T05:26:34Z",
+            "git_url": "git://github.com/os-checker/os-checker.git",
+            "ssh_url": "git@github.com:os-checker/os-checker.git",
+            "clone_url": "https://github.com/os-checker/os-checker.git",
+            "svn_url": "https://github.com/os-checker/os-checker",
+            "homepage": "https://os-checker.github.io",
+            "size": 992,
+            "stargazers_count": 7,
+            "watchers_count": 7,
+            "language": "Rust",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 33,
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 33,
+            "watchers": 7,
+            "default_branch": "main"
+          }
+        },
+        "base": {
+          "label": "os-checker:main",
+          "ref": "main",
+          "sha": "8f70fb72ee129c9499839b21d0019d7e459134c7",
+          "user": {
+            "login": "os-checker",
+            "id": 175544884,
+            "node_id": "O_kgDOCnaaNA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/os-checker",
+            "html_url": "https://github.com/os-checker",
+            "followers_url": "https://api.github.com/users/os-checker/followers",
+            "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+            "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+            "organizations_url": "https://api.github.com/users/os-checker/orgs",
+            "repos_url": "https://api.github.com/users/os-checker/repos",
+            "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/os-checker/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 828983203,
+            "node_id": "R_kgDOMWlHow",
+            "name": "os-checker",
+            "full_name": "os-checker/os-checker",
+            "private": false,
+            "owner": {
+              "login": "os-checker",
+              "id": 175544884,
+              "node_id": "O_kgDOCnaaNA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/os-checker",
+              "html_url": "https://github.com/os-checker",
+              "followers_url": "https://api.github.com/users/os-checker/followers",
+              "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+              "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+              "organizations_url": "https://api.github.com/users/os-checker/orgs",
+              "repos_url": "https://api.github.com/users/os-checker/repos",
+              "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/os-checker/received_events",
+              "type": "Organization",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/os-checker/os-checker",
+            "description": "对 Rust 编写的代码运行一系列检查工具，并对结果进行报告和统计",
+            "fork": false,
+            "url": "https://api.github.com/repos/os-checker/os-checker",
+            "forks_url": "https://api.github.com/repos/os-checker/os-checker/forks",
+            "keys_url": "https://api.github.com/repos/os-checker/os-checker/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/os-checker/os-checker/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/os-checker/os-checker/teams",
+            "hooks_url": "https://api.github.com/repos/os-checker/os-checker/hooks",
+            "issue_events_url": "https://api.github.com/repos/os-checker/os-checker/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/os-checker/os-checker/events",
+            "assignees_url": "https://api.github.com/repos/os-checker/os-checker/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/os-checker/os-checker/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/os-checker/os-checker/tags",
+            "blobs_url": "https://api.github.com/repos/os-checker/os-checker/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/os-checker/os-checker/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/os-checker/os-checker/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/os-checker/os-checker/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/os-checker/os-checker/languages",
+            "stargazers_url": "https://api.github.com/repos/os-checker/os-checker/stargazers",
+            "contributors_url": "https://api.github.com/repos/os-checker/os-checker/contributors",
+            "subscribers_url": "https://api.github.com/repos/os-checker/os-checker/subscribers",
+            "subscription_url": "https://api.github.com/repos/os-checker/os-checker/subscription",
+            "commits_url": "https://api.github.com/repos/os-checker/os-checker/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/os-checker/os-checker/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/os-checker/os-checker/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/os-checker/os-checker/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/os-checker/os-checker/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/os-checker/os-checker/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/os-checker/os-checker/merges",
+            "archive_url": "https://api.github.com/repos/os-checker/os-checker/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/os-checker/os-checker/downloads",
+            "issues_url": "https://api.github.com/repos/os-checker/os-checker/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/os-checker/os-checker/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/os-checker/os-checker/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/os-checker/os-checker/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/os-checker/os-checker/labels{/name}",
+            "releases_url": "https://api.github.com/repos/os-checker/os-checker/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/os-checker/os-checker/deployments",
+            "created_at": "2024-07-15T14:14:00Z",
+            "updated_at": "2024-11-02T05:43:44Z",
+            "pushed_at": "2024-11-02T05:26:34Z",
+            "git_url": "git://github.com/os-checker/os-checker.git",
+            "ssh_url": "git@github.com:os-checker/os-checker.git",
+            "clone_url": "https://github.com/os-checker/os-checker.git",
+            "svn_url": "https://github.com/os-checker/os-checker",
+            "homepage": "https://os-checker.github.io",
+            "size": 992,
+            "stargazers_count": 7,
+            "watchers_count": 7,
+            "language": "Rust",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 33,
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 33,
+            "watchers": 7,
+            "default_branch": "main"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162"
+          },
+          "html": {
+            "href": "https://github.com/os-checker/os-checker/pull/162"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/issues/162"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/issues/162/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/statuses/a31ccb67f1c25c27a66dcdbb5848128191209c17"
+          }
+        },
+        "author_association": "MEMBER",
+        "auto_merge": null,
+        "active_lock_reason": null,
+        "merged": true,
+        "mergeable": null,
+        "rebaseable": null,
+        "mergeable_state": "unknown",
+        "merged_by": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 16,
+        "additions": 161,
+        "deletions": 7,
+        "changed_files": 14
+      }
+    },
+    "public": true,
+    "created_at": "2024-11-03T04:49:37Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43451290466",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "closed",
+      "issue": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/161",
+        "repository_url": "https://api.github.com/repos/os-checker/os-checker",
+        "labels_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/labels{/name}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/comments",
+        "events_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/events",
+        "html_url": "https://github.com/os-checker/os-checker/issues/161",
+        "id": 2629962964,
+        "node_id": "I_kwDOMWlHo86cwgzU",
+        "number": 161,
+        "title": "集成 Rudra 检测 panic safety (dataflow analysis)和 Send/Sync Variance ",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "closed",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 0,
+        "created_at": "2024-11-01T22:28:26Z",
+        "updated_at": "2024-11-03T04:49:37Z",
+        "closed_at": "2024-11-03T04:49:37Z",
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "https://github.com/sslab-gatech/Rudra\r\n\r\n![截图_20241102060634](https://github.com/user-attachments/assets/f9cd5928-2a8e-47e4-a4b7-2b9e6c89ee46)\r\n",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/161/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/timeline",
+        "performed_via_github_app": null,
+        "state_reason": "completed"
+      }
+    },
+    "public": true,
+    "created_at": "2024-11-03T04:49:37Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43451289029",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 162,
+      "pull_request": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/pulls/162",
+        "id": 2159502695,
+        "node_id": "PR_kwDOMWlHo86At2Vn",
+        "html_url": "https://github.com/os-checker/os-checker/pull/162",
+        "diff_url": "https://github.com/os-checker/os-checker/pull/162.diff",
+        "patch_url": "https://github.com/os-checker/os-checker/pull/162.patch",
+        "issue_url": "https://api.github.com/repos/os-checker/os-checker/issues/162",
+        "number": 162,
+        "state": "open",
+        "locked": false,
+        "title": "feat: 集成 Rudra 检测 panic safety 和 Send/Sync Variance",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "body": "close https://github.com/os-checker/os-checker/issues/161\r\n\r\n目前在所有 108 个仓库上，尚未检测到 Rudra 报告的错误：\r\n\r\n![截图_20241103124529](https://github.com/user-attachments/assets/52706e63-07e1-404c-8a9d-164d0aac536d)\r\n\r\ntest-suite 中 Rudra 的测例情况：\r\n\r\n![截图_20241102060634](https://github.com/user-attachments/assets/f9cd5928-2a8e-47e4-a4b7-2b9e6c89ee46)\r\n",
+        "created_at": "2024-11-03T04:49:22Z",
+        "updated_at": "2024-11-03T04:49:22Z",
+        "closed_at": null,
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "assignee": null,
+        "assignees": [],
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "labels": [],
+        "milestone": null,
+        "draft": false,
+        "commits_url": "https://api.github.com/repos/os-checker/os-checker/pulls/162/commits",
+        "review_comments_url": "https://api.github.com/repos/os-checker/os-checker/pulls/162/comments",
+        "review_comment_url": "https://api.github.com/repos/os-checker/os-checker/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/162/comments",
+        "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/a31ccb67f1c25c27a66dcdbb5848128191209c17",
+        "head": {
+          "label": "os-checker:feat/rudra",
+          "ref": "feat/rudra",
+          "sha": "a31ccb67f1c25c27a66dcdbb5848128191209c17",
+          "user": {
+            "login": "os-checker",
+            "id": 175544884,
+            "node_id": "O_kgDOCnaaNA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/os-checker",
+            "html_url": "https://github.com/os-checker",
+            "followers_url": "https://api.github.com/users/os-checker/followers",
+            "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+            "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+            "organizations_url": "https://api.github.com/users/os-checker/orgs",
+            "repos_url": "https://api.github.com/users/os-checker/repos",
+            "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/os-checker/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 828983203,
+            "node_id": "R_kgDOMWlHow",
+            "name": "os-checker",
+            "full_name": "os-checker/os-checker",
+            "private": false,
+            "owner": {
+              "login": "os-checker",
+              "id": 175544884,
+              "node_id": "O_kgDOCnaaNA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/os-checker",
+              "html_url": "https://github.com/os-checker",
+              "followers_url": "https://api.github.com/users/os-checker/followers",
+              "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+              "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+              "organizations_url": "https://api.github.com/users/os-checker/orgs",
+              "repos_url": "https://api.github.com/users/os-checker/repos",
+              "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/os-checker/received_events",
+              "type": "Organization",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/os-checker/os-checker",
+            "description": "对 Rust 编写的代码运行一系列检查工具，并对结果进行报告和统计",
+            "fork": false,
+            "url": "https://api.github.com/repos/os-checker/os-checker",
+            "forks_url": "https://api.github.com/repos/os-checker/os-checker/forks",
+            "keys_url": "https://api.github.com/repos/os-checker/os-checker/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/os-checker/os-checker/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/os-checker/os-checker/teams",
+            "hooks_url": "https://api.github.com/repos/os-checker/os-checker/hooks",
+            "issue_events_url": "https://api.github.com/repos/os-checker/os-checker/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/os-checker/os-checker/events",
+            "assignees_url": "https://api.github.com/repos/os-checker/os-checker/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/os-checker/os-checker/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/os-checker/os-checker/tags",
+            "blobs_url": "https://api.github.com/repos/os-checker/os-checker/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/os-checker/os-checker/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/os-checker/os-checker/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/os-checker/os-checker/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/os-checker/os-checker/languages",
+            "stargazers_url": "https://api.github.com/repos/os-checker/os-checker/stargazers",
+            "contributors_url": "https://api.github.com/repos/os-checker/os-checker/contributors",
+            "subscribers_url": "https://api.github.com/repos/os-checker/os-checker/subscribers",
+            "subscription_url": "https://api.github.com/repos/os-checker/os-checker/subscription",
+            "commits_url": "https://api.github.com/repos/os-checker/os-checker/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/os-checker/os-checker/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/os-checker/os-checker/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/os-checker/os-checker/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/os-checker/os-checker/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/os-checker/os-checker/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/os-checker/os-checker/merges",
+            "archive_url": "https://api.github.com/repos/os-checker/os-checker/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/os-checker/os-checker/downloads",
+            "issues_url": "https://api.github.com/repos/os-checker/os-checker/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/os-checker/os-checker/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/os-checker/os-checker/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/os-checker/os-checker/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/os-checker/os-checker/labels{/name}",
+            "releases_url": "https://api.github.com/repos/os-checker/os-checker/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/os-checker/os-checker/deployments",
+            "created_at": "2024-07-15T14:14:00Z",
+            "updated_at": "2024-11-02T05:43:44Z",
+            "pushed_at": "2024-11-02T05:26:34Z",
+            "git_url": "git://github.com/os-checker/os-checker.git",
+            "ssh_url": "git@github.com:os-checker/os-checker.git",
+            "clone_url": "https://github.com/os-checker/os-checker.git",
+            "svn_url": "https://github.com/os-checker/os-checker",
+            "homepage": "https://os-checker.github.io",
+            "size": 992,
+            "stargazers_count": 7,
+            "watchers_count": 7,
+            "language": "Rust",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 34,
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 34,
+            "watchers": 7,
+            "default_branch": "main"
+          }
+        },
+        "base": {
+          "label": "os-checker:main",
+          "ref": "main",
+          "sha": "8f70fb72ee129c9499839b21d0019d7e459134c7",
+          "user": {
+            "login": "os-checker",
+            "id": 175544884,
+            "node_id": "O_kgDOCnaaNA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/os-checker",
+            "html_url": "https://github.com/os-checker",
+            "followers_url": "https://api.github.com/users/os-checker/followers",
+            "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+            "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+            "organizations_url": "https://api.github.com/users/os-checker/orgs",
+            "repos_url": "https://api.github.com/users/os-checker/repos",
+            "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/os-checker/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 828983203,
+            "node_id": "R_kgDOMWlHow",
+            "name": "os-checker",
+            "full_name": "os-checker/os-checker",
+            "private": false,
+            "owner": {
+              "login": "os-checker",
+              "id": 175544884,
+              "node_id": "O_kgDOCnaaNA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/175544884?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/os-checker",
+              "html_url": "https://github.com/os-checker",
+              "followers_url": "https://api.github.com/users/os-checker/followers",
+              "following_url": "https://api.github.com/users/os-checker/following{/other_user}",
+              "gists_url": "https://api.github.com/users/os-checker/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/os-checker/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/os-checker/subscriptions",
+              "organizations_url": "https://api.github.com/users/os-checker/orgs",
+              "repos_url": "https://api.github.com/users/os-checker/repos",
+              "events_url": "https://api.github.com/users/os-checker/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/os-checker/received_events",
+              "type": "Organization",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/os-checker/os-checker",
+            "description": "对 Rust 编写的代码运行一系列检查工具，并对结果进行报告和统计",
+            "fork": false,
+            "url": "https://api.github.com/repos/os-checker/os-checker",
+            "forks_url": "https://api.github.com/repos/os-checker/os-checker/forks",
+            "keys_url": "https://api.github.com/repos/os-checker/os-checker/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/os-checker/os-checker/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/os-checker/os-checker/teams",
+            "hooks_url": "https://api.github.com/repos/os-checker/os-checker/hooks",
+            "issue_events_url": "https://api.github.com/repos/os-checker/os-checker/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/os-checker/os-checker/events",
+            "assignees_url": "https://api.github.com/repos/os-checker/os-checker/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/os-checker/os-checker/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/os-checker/os-checker/tags",
+            "blobs_url": "https://api.github.com/repos/os-checker/os-checker/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/os-checker/os-checker/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/os-checker/os-checker/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/os-checker/os-checker/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/os-checker/os-checker/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/os-checker/os-checker/languages",
+            "stargazers_url": "https://api.github.com/repos/os-checker/os-checker/stargazers",
+            "contributors_url": "https://api.github.com/repos/os-checker/os-checker/contributors",
+            "subscribers_url": "https://api.github.com/repos/os-checker/os-checker/subscribers",
+            "subscription_url": "https://api.github.com/repos/os-checker/os-checker/subscription",
+            "commits_url": "https://api.github.com/repos/os-checker/os-checker/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/os-checker/os-checker/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/os-checker/os-checker/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/os-checker/os-checker/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/os-checker/os-checker/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/os-checker/os-checker/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/os-checker/os-checker/merges",
+            "archive_url": "https://api.github.com/repos/os-checker/os-checker/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/os-checker/os-checker/downloads",
+            "issues_url": "https://api.github.com/repos/os-checker/os-checker/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/os-checker/os-checker/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/os-checker/os-checker/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/os-checker/os-checker/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/os-checker/os-checker/labels{/name}",
+            "releases_url": "https://api.github.com/repos/os-checker/os-checker/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/os-checker/os-checker/deployments",
+            "created_at": "2024-07-15T14:14:00Z",
+            "updated_at": "2024-11-02T05:43:44Z",
+            "pushed_at": "2024-11-02T05:26:34Z",
+            "git_url": "git://github.com/os-checker/os-checker.git",
+            "ssh_url": "git@github.com:os-checker/os-checker.git",
+            "clone_url": "https://github.com/os-checker/os-checker.git",
+            "svn_url": "https://github.com/os-checker/os-checker",
+            "homepage": "https://os-checker.github.io",
+            "size": 992,
+            "stargazers_count": 7,
+            "watchers_count": 7,
+            "language": "Rust",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 34,
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 34,
+            "watchers": 7,
+            "default_branch": "main"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162"
+          },
+          "html": {
+            "href": "https://github.com/os-checker/os-checker/pull/162"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/issues/162"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/issues/162/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/pulls/162/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/os-checker/os-checker/statuses/a31ccb67f1c25c27a66dcdbb5848128191209c17"
+          }
+        },
+        "author_association": "MEMBER",
+        "auto_merge": null,
+        "active_lock_reason": null,
+        "merged": false,
+        "mergeable": null,
+        "rebaseable": null,
+        "mergeable_state": "unknown",
+        "merged_by": null,
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 16,
+        "additions": 161,
+        "deletions": 7,
+        "changed_files": 14
+      }
+    },
+    "public": true,
+    "created_at": "2024-11-03T04:49:24Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43440218916",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 52118815,
+      "login": "Gallium70",
+      "display_login": "Gallium70",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Gallium70",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52118815?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2024-11-02T05:43:43Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43440085603",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21015124292,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "a31ccb67f1c25c27a66dcdbb5848128191209c17",
+      "before": "7948852b4f3f44414d5b7658ce08c2dec87a165e",
+      "commits": [
+        {
+          "sha": "a31ccb67f1c25c27a66dcdbb5848128191209c17",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/a31ccb67f1c25c27a66dcdbb5848128191209c17"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T05:26:35Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43439425011",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21014682390,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "7948852b4f3f44414d5b7658ce08c2dec87a165e",
+      "before": "95b783406b4ea8a52a543208f9964ebd5de2996e",
+      "commits": [
+        {
+          "sha": "7948852b4f3f44414d5b7658ce08c2dec87a165e",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check all repos",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/7948852b4f3f44414d5b7658ce08c2dec87a165e"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T03:56:14Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43438628354",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21014153904,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "95b783406b4ea8a52a543208f9964ebd5de2996e",
+      "before": "226d571396a04f9bce1edae86fb6fa5bdb87584a",
+      "commits": [
+        {
+          "sha": "95b783406b4ea8a52a543208f9964ebd5de2996e",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): CONFIGS: repos-ui.json",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/95b783406b4ea8a52a543208f9964ebd5de2996e"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T02:13:42Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43438274737",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21013922549,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "226d571396a04f9bce1edae86fb6fa5bdb87584a",
+      "before": "77d582fd5e46fa8a536c30fa21b5862cea6fad62",
+      "commits": [
+        {
+          "sha": "226d571396a04f9bce1edae86fb6fa5bdb87584a",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): FORCE_REPO_CHECK=true",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/226d571396a04f9bce1edae86fb6fa5bdb87584a"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T01:30:23Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43437675549",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21013534267,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "77d582fd5e46fa8a536c30fa21b5862cea6fad62",
+      "before": "9aaa3ef84cc3644ad09b41fa504686b0b181c719",
+      "commits": [
+        {
+          "sha": "77d582fd5e46fa8a536c30fa21b5862cea6fad62",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to debug database & cache-v11.redb tag",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/77d582fd5e46fa8a536c30fa21b5862cea6fad62"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T00:27:25Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43437537949",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21013452112,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "9aaa3ef84cc3644ad09b41fa504686b0b181c719",
+      "before": "fd8274d19448607dbc83703b2cb55a3280bdf385",
+      "commits": [
+        {
+          "sha": "9aaa3ef84cc3644ad09b41fa504686b0b181c719",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/9aaa3ef84cc3644ad09b41fa504686b0b181c719"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-02T00:13:52Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43436251667",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "opened",
+      "issue": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/161",
+        "repository_url": "https://api.github.com/repos/os-checker/os-checker",
+        "labels_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/labels{/name}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/comments",
+        "events_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/events",
+        "html_url": "https://github.com/os-checker/os-checker/issues/161",
+        "id": 2629962964,
+        "node_id": "I_kwDOMWlHo86cwgzU",
+        "number": 161,
+        "title": "集成 Rudra 检测 panic safety (dataflow analysis)和 Send/Sync Variance ",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "open",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 0,
+        "created_at": "2024-11-01T22:28:26Z",
+        "updated_at": "2024-11-01T22:28:26Z",
+        "closed_at": null,
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "![截图_20241102060634](https://github.com/user-attachments/assets/f9cd5928-2a8e-47e4-a4b7-2b9e6c89ee46)\r\n",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/161/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/os-checker/os-checker/issues/161/timeline",
+        "performed_via_github_app": null,
+        "state_reason": null
+      }
+    },
+    "public": true,
+    "created_at": "2024-11-01T22:28:28Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43435934296",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21012561549,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "fd8274d19448607dbc83703b2cb55a3280bdf385",
+      "before": "0918adda9e97298b50213d9de331b9a44de208d9",
+      "commits": [
+        {
+          "sha": "fd8274d19448607dbc83703b2cb55a3280bdf385",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): run rudra for all repos",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/fd8274d19448607dbc83703b2cb55a3280bdf385"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-01T22:08:00Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43435791213",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21012484218,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "0918adda9e97298b50213d9de331b9a44de208d9",
+      "before": "33eaa1234358502ad6d7c551ff2473d17c25e52b",
+      "commits": [
+        {
+          "sha": "0918adda9e97298b50213d9de331b9a44de208d9",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "fix(rudra): parse fn",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/0918adda9e97298b50213d9de331b9a44de208d9"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-01T21:59:07Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43435167967",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21012168073,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "33eaa1234358502ad6d7c551ff2473d17c25e52b",
+      "before": "c64ff5864a21fbc9b7b05d7cb9f08fb963421055",
+      "commits": [
+        {
+          "sha": "33eaa1234358502ad6d7c551ff2473d17c25e52b",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): FORCE_REPO_CHECK=true",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/33eaa1234358502ad6d7c551ff2473d17c25e52b"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-01T21:23:02Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43435043175",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21012102541,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/feat/rudra",
+      "head": "c64ff5864a21fbc9b7b05d7cb9f08fb963421055",
+      "before": "0bc9c1bc9b64cfec7423b2bdca3e71dcb44d8185",
+      "commits": [
+        {
+          "sha": "c64ff5864a21fbc9b7b05d7cb9f08fb963421055",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(rudra): enable Rudra checker by default",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/c64ff5864a21fbc9b7b05d7cb9f08fb963421055"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-01T21:16:32Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43434896541",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "ref": "feat/rudra",
+      "ref_type": "branch",
+      "master_branch": "main",
+      "description": "对 Rust 编写的代码运行一系列检查工具，并对结果进行报告和统计",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2024-11-01T21:09:12Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43421411961",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 21005243586,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "8f70fb72ee129c9499839b21d0019d7e459134c7",
+      "before": "24d264a8399020ce1844cfd0c60732aceab584ec",
+      "commits": [
+        {
+          "sha": "8f70fb72ee129c9499839b21d0019d7e459134c7",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to debug database branch\n\na few repos added from kern-crates",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/8f70fb72ee129c9499839b21d0019d7e459134c7"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-11-01T12:37:21Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43294152741",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20942148891,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "24d264a8399020ce1844cfd0c60732aceab584ec",
+      "before": "175acc1b35dcc88ddf60a5ce292ae56afeb5b7b6",
+      "commits": [
+        {
+          "sha": "24d264a8399020ce1844cfd0c60732aceab584ec",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/24d264a8399020ce1844cfd0c60732aceab584ec"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-29T03:26:13Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43294125888",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/154",
+        "repository_url": "https://api.github.com/repos/os-checker/os-checker",
+        "labels_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/labels{/name}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/comments",
+        "events_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/events",
+        "html_url": "https://github.com/os-checker/os-checker/issues/154",
+        "id": 2616280980,
+        "node_id": "I_kwDOMWlHo86b8UeU",
+        "number": 154,
+        "title": "feat: 集成 cargo-geiger 来检测代码库中是否包含 unsafe Rust",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "closed",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 2,
+        "created_at": "2024-10-27T03:30:14Z",
+        "updated_at": "2024-10-29T03:24:43Z",
+        "closed_at": "2024-10-27T12:38:45Z",
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "![image](https://github.com/user-attachments/assets/361bc8b9-5a84-4643-885b-11e5ce58e319)\r\n\r\n\r\n该工具一些问题：\r\n* https://github.com/geiger-rs/cargo-geiger/pull/518 ：该 PR 尚未合并，所以 os-checker 基于它有一个自己维护的 [geiger](https://github.com/os-checker/fork-cargo-geiger)，并使用自己发布的二进制文件。\r\n* 无法直接区分包含 unsafe Rust 和完全不含 unsafe Rust：在含和不含 unsafe 代码时，它都正常返回，因此要么额外解析它的 JSON 输出，要么根据文本搜索来确定是否包含 unsafe 代码。\r\n\r\n\r\n\r\n运行一次 geiger 需要编译，因此如果额外获取 JSON 输出，需要运行两次，除非直接根据 JSON 自己展示它的数据。\r\n\r\n\r\n\r\n![截图_20241027112912](https://github.com/user-attachments/assets/964661d6-8b12-44ec-b22e-9093ba9f227a)\r\n\r\n\r\n暂时先不为它绘制 UI，因为对于 Unsafe 代码的 WebUI，需要额外的设计。",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/154/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/timeline",
+        "performed_via_github_app": null,
+        "state_reason": "completed"
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/comments/2443121834",
+        "html_url": "https://github.com/os-checker/os-checker/issues/154#issuecomment-2443121834",
+        "issue_url": "https://api.github.com/repos/os-checker/os-checker/issues/154",
+        "id": 2443121834,
+        "node_id": "IC_kwDOMWlHo86RnxSq",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "created_at": "2024-10-29T03:24:42Z",
+        "updated_at": "2024-10-29T03:24:42Z",
+        "author_association": "MEMBER",
+        "body": "检查全部仓库的 geiger 结果：\r\n\r\n![截图_20241029112414](https://github.com/user-attachments/assets/3ac243f2-cfbf-4b49-9440-d36a684048ec)\r\n\r\n",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/comments/2443121834/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "performed_via_github_app": null
+      }
+    },
+    "public": true,
+    "created_at": "2024-10-29T03:24:43Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43291978149",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20940984330,
+      "size": 2,
+      "distinct_size": 2,
+      "ref": "refs/heads/main",
+      "head": "175acc1b35dcc88ddf60a5ce292ae56afeb5b7b6",
+      "before": "d0b414b045c97f32e8bf03c1537074ae6081377d",
+      "commits": [
+        {
+          "sha": "c6b6ae22535f03b84c91b45024431d8367178f19",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(config): downgrade debug!(?config)",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/c6b6ae22535f03b84c91b45024431d8367178f19"
+        },
+        {
+          "sha": "175acc1b35dcc88ddf60a5ce292ae56afeb5b7b6",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(repos): bring embassy config back",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/175acc1b35dcc88ddf60a5ce292ae56afeb5b7b6"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-29T01:23:21Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43273520141",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20931952165,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "d0b414b045c97f32e8bf03c1537074ae6081377d",
+      "before": "04990dae2c9f344075de17062f0f6780ababceab",
+      "commits": [
+        {
+          "sha": "d0b414b045c97f32e8bf03c1537074ae6081377d",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check all repos",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/d0b414b045c97f32e8bf03c1537074ae6081377d"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-28T14:33:54Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43269977910",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20930325419,
+      "size": 2,
+      "distinct_size": 2,
+      "ref": "refs/heads/main",
+      "head": "04990dae2c9f344075de17062f0f6780ababceab",
+      "before": "2ce1e5928c412f430a5e88e8ce7385e786f58e98",
+      "commits": [
+        {
+          "sha": "363821efe630bea8d253f9a8023d1e48305b4119",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(run_check): run cargo clean before some checkers start\n\nref: https://github.com/os-checker/os-checker/issues/160",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/363821efe630bea8d253f9a8023d1e48305b4119"
+        },
+        {
+          "sha": "04990dae2c9f344075de17062f0f6780ababceab",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check for repos-ui",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/04990dae2c9f344075de17062f0f6780ababceab"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-28T13:07:26Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43253550705",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20922415147,
+      "size": 4,
+      "distinct_size": 4,
+      "ref": "refs/heads/main",
+      "head": "2ce1e5928c412f430a5e88e8ce7385e786f58e98",
+      "before": "273febb46af47da9ae3d7af57444f36255e0d9c6",
+      "commits": [
+        {
+          "sha": "109f5ac79448ce299f3321a564ea814e79303c50",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "test(musli): POV musli causes data curruption on enum variant insertion\n\nref: https://github.com/os-checker/os-checker/issues/143",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/109f5ac79448ce299f3321a564ea814e79303c50"
+        },
+        {
+          "sha": "baba3e905a3ad188ed8b5bbc41e10946b84702a7",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "test(musli): #[musli(name_all = \"name\")] makes variant insertion non-breaking change\n\nref: https://github.com/os-checker/os-checker/issues/143",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/baba3e905a3ad188ed8b5bbc41e10946b84702a7"
+        },
+        {
+          "sha": "ed21ecf81dafe2c82b870f07f836842abea842f0",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(types): add #[musli(name_all = \"name\")] on Kind and CheckerTool\n\nto aviod breaking changes when a variant is inserted\n\nref: https://github.com/os-checker/os-checker/issues/143",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/ed21ecf81dafe2c82b870f07f836842abea842f0"
+        },
+        {
+          "sha": "2ce1e5928c412f430a5e88e8ce7385e786f58e98",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check os-checker-test-suite",
+          "distinct": true,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/2ce1e5928c412f430a5e88e8ce7385e786f58e98"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-28T03:47:41Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43252617916",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "opened",
+      "issue": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/160",
+        "repository_url": "https://api.github.com/repos/os-checker/os-checker",
+        "labels_url": "https://api.github.com/repos/os-checker/os-checker/issues/160/labels{/name}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/160/comments",
+        "events_url": "https://api.github.com/repos/os-checker/os-checker/issues/160/events",
+        "html_url": "https://github.com/os-checker/os-checker/issues/160",
+        "id": 2617163785,
+        "node_id": "I_kwDOMWlHo86b_sAJ",
+        "number": 160,
+        "title": "再次解决磁盘耗尽",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "open",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 0,
+        "created_at": "2024-10-28T03:00:41Z",
+        "updated_at": "2024-10-28T03:00:41Z",
+        "closed_at": null,
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "最近集成的工具变得越来越多，大项目上的构建产物也膨胀到磁盘耗尽。\r\n\r\n目前 os-checker 已经在仓库和仓库的检查上串行执行，并在每个仓库检查之后删除仓库、构建结果和工具链。\r\n\r\n但是涉及编译的的检查依然会造成某些磁盘浪费。\r\n\r\n一些解决办法是：\r\n* 在一些编译重的检查上，先运行 cargo clean，然后再检查：这会导致许多重新编译，并增加编译时间；一个优化是，对检查类型分组，运行新的一类检查时，cargo clean 一次。\r\n* run 子命令添加 --checker 参数，这相当于把指定一类检查放到了外部，对使用者更灵活也更可控 —— 比如将来支持部分检查。\r\n\r\n但目前没有强烈的需求来支持 --checker 参数，因为目前使用者只有我自己，工具的使用变得过于复杂会对维护造成障碍。",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/160/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/os-checker/os-checker/issues/160/timeline",
+        "performed_via_github_app": null,
+        "state_reason": null
+      }
+    },
+    "public": true,
+    "created_at": "2024-10-28T03:00:43Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43243102542",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "ref": "feat/cargo-geiger",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2024-10-27T12:38:48Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43243102094",
+    "type": "PushEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "repository_id": 828983203,
+      "push_id": 20915959354,
+      "size": 21,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "273febb46af47da9ae3d7af57444f36255e0d9c6",
+      "before": "052e390e1d5ef44d7b4c7f7d7693e671c84a5226",
+      "commits": [
+        {
+          "sha": "122b2f72275222d35e41567b00717ab4ee90a8dc",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): TAG_CACHE: cache-v9.redb",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/122b2f72275222d35e41567b00717ab4ee90a8dc"
+        },
+        {
+          "sha": "e4af07aa1fac89bd647663a2391e540e0c2e573a",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to main database branch; FORCE_REPO_CHECK: false",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/e4af07aa1fac89bd647663a2391e540e0c2e573a"
+        },
+        {
+          "sha": "fee8d6157f0bfff82c958f90b5defb953b8b91a9",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(repos): remove arceos-org/arceos which is the same as kern-crates/arceos",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/fee8d6157f0bfff82c958f90b5defb953b8b91a9"
+        },
+        {
+          "sha": "96e22d747cd2f50169000df00fb9d0cd8fad4e35",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): push to debug database branch",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/96e22d747cd2f50169000df00fb9d0cd8fad4e35"
+        },
+        {
+          "sha": "5127277edc1a4ba8d64bfc9de2df91fffd244383",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(types): add Geiger variant",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/5127277edc1a4ba8d64bfc9de2df91fffd244383"
+        },
+        {
+          "sha": "d66cbc9041aef47d687bc7799ac52eb023a380c0",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(geiger): define and apply cargo_geiger fn",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/d66cbc9041aef47d687bc7799ac52eb023a380c0"
+        },
+        {
+          "sha": "4b030a58788c81f06cc19fdae618f66d6e66ab5b",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(geiger): run cargo-geiger by default",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/4b030a58788c81f06cc19fdae618f66d6e66ab5b"
+        },
+        {
+          "sha": "53229ed8efa0b448e21a70c8829bc4494c129b3d",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(geiger): parse output",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/53229ed8efa0b448e21a70c8829bc4494c129b3d"
+        },
+        {
+          "sha": "f39b85ad7a3360edb6f43620d46a736d170578d7",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): run cargo-geiger on test suite",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/f39b85ad7a3360edb6f43620d46a736d170578d7"
+        },
+        {
+          "sha": "bb7c8615d02ed8565db642245d3b65069e5a32f6",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(geiger): handle geiger in resolve_for_single_pkg",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/bb7c8615d02ed8565db642245d3b65069e5a32f6"
+        },
+        {
+          "sha": "769b357dfcaffc35df2af40d71e185be34fa7909",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "feat(ci): download cargo-geiger",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/769b357dfcaffc35df2af40d71e185be34fa7909"
+        },
+        {
+          "sha": "13b28bd60472c5ea8f2d1561b97352223fc7b557",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(geiger): force check",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/13b28bd60472c5ea8f2d1561b97352223fc7b557"
+        },
+        {
+          "sha": "0a903e5913e64bfc9ecb813ed82e7ca74264f568",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "fix(geiger): --color=never",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/0a903e5913e64bfc9ecb813ed82e7ca74264f568"
+        },
+        {
+          "sha": "ddfd0df98a74ad79d64de138299b9682fca0db99",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "fix(geiger): fix --color never",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/ddfd0df98a74ad79d64de138299b9682fca0db99"
+        },
+        {
+          "sha": "4245e752b6ba6ad8e5cccf7e0c3eba2a4a49eba4",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check all repos in batch",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/4245e752b6ba6ad8e5cccf7e0c3eba2a4a49eba4"
+        },
+        {
+          "sha": "8546d61a71056233bb42f21a9e9ada63546d8589",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(geiger): no force_check",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/8546d61a71056233bb42f21a9e9ada63546d8589"
+        },
+        {
+          "sha": "32c2f8caf3654092627ac869ff44bac876e2b72b",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "fix(ci): TAG_CACHE: cache-v10.redb 添加 geiger 时缓存错乱\n\nsee https://github.com/os-checker/os-checker/issues/143",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/32c2f8caf3654092627ac869ff44bac876e2b72b"
+        },
+        {
+          "sha": "8afe759b62e8ffe4f58f2507616fee305e798b97",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): FORCE_REPO_CHECK: false",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/8afe759b62e8ffe4f58f2507616fee305e798b97"
+        },
+        {
+          "sha": "d0239eeca60b33037a57e66770f741db5b71f2e1",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): disable mirai on embassy due to space shortage",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/d0239eeca60b33037a57e66770f741db5b71f2e1"
+        },
+        {
+          "sha": "ab2da984dfb03cf70a8ccfe4b805f49cf6fe94e8",
+          "author": {
+            "email": "jiping_zhou@foxmail.com",
+            "name": "zjp"
+          },
+          "message": "chore(ci): check repos-ui",
+          "distinct": false,
+          "url": "https://api.github.com/repos/os-checker/os-checker/commits/ab2da984dfb03cf70a8ccfe4b805f49cf6fe94e8"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2024-10-27T12:38:45Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  },
+  {
+    "id": "43243102071",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 25300418,
+      "login": "zjp-CN",
+      "display_login": "zjp-CN",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?"
+    },
+    "repo": {
+      "id": 828983203,
+      "name": "os-checker/os-checker",
+      "url": "https://api.github.com/repos/os-checker/os-checker"
+    },
+    "payload": {
+      "action": "closed",
+      "issue": {
+        "url": "https://api.github.com/repos/os-checker/os-checker/issues/154",
+        "repository_url": "https://api.github.com/repos/os-checker/os-checker",
+        "labels_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/labels{/name}",
+        "comments_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/comments",
+        "events_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/events",
+        "html_url": "https://github.com/os-checker/os-checker/issues/154",
+        "id": 2616280980,
+        "node_id": "I_kwDOMWlHo86b8UeU",
+        "number": 154,
+        "title": "feat: 集成 cargo-geiger 来检测代码库中是否包含 unsafe Rust",
+        "user": {
+          "login": "zjp-CN",
+          "id": 25300418,
+          "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zjp-CN",
+          "html_url": "https://github.com/zjp-CN",
+          "followers_url": "https://api.github.com/users/zjp-CN/followers",
+          "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+          "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+          "repos_url": "https://api.github.com/users/zjp-CN/repos",
+          "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "closed",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 1,
+        "created_at": "2024-10-27T03:30:14Z",
+        "updated_at": "2024-10-27T12:38:45Z",
+        "closed_at": "2024-10-27T12:38:45Z",
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "![image](https://github.com/user-attachments/assets/361bc8b9-5a84-4643-885b-11e5ce58e319)\r\n\r\n\r\n该工具一些问题：\r\n* https://github.com/geiger-rs/cargo-geiger/pull/518 ：该 PR 尚未合并，所以 os-checker 基于它有一个自己维护的 [geiger](https://github.com/os-checker/fork-cargo-geiger)，并使用自己发布的二进制文件。\r\n* 无法直接区分包含 unsafe Rust 和完全不含 unsafe Rust：在含和不含 unsafe 代码时，它都正常返回，因此要么额外解析它的 JSON 输出，要么根据文本搜索来确定是否包含 unsafe 代码。\r\n\r\n\r\n\r\n运行一次 geiger 需要编译，因此如果额外获取 JSON 输出，需要运行两次，除非直接根据 JSON 自己展示它的数据。\r\n\r\n\r\n\r\n![截图_20241027112912](https://github.com/user-attachments/assets/964661d6-8b12-44ec-b22e-9093ba9f227a)\r\n\r\n\r\n暂时先不为它绘制 UI，因为对于 Unsafe 代码的 WebUI，需要额外的设计。",
+        "reactions": {
+          "url": "https://api.github.com/repos/os-checker/os-checker/issues/154/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/os-checker/os-checker/issues/154/timeline",
+        "performed_via_github_app": null,
+        "state_reason": "completed"
+      }
+    },
+    "public": true,
+    "created_at": "2024-10-27T12:38:45Z",
+    "org": {
+      "id": 175544884,
+      "login": "os-checker",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/os-checker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175544884?"
+    }
+  }
+]
