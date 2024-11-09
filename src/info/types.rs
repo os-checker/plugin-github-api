@@ -1,9 +1,9 @@
 #![allow(unused)]
 use crate::{client::github, parse_response, Result};
 use jiff::Timestamp;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct Info {
     /// repo name
     name: String,
@@ -49,7 +49,7 @@ struct Info {
     license: Option<License>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct Owner {
     /// user name
     login: String,
@@ -57,7 +57,7 @@ struct Owner {
     r#type: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct License {
     spdx_id: String,
 }
@@ -78,7 +78,7 @@ async fn query() -> Result<()> {
     Ok(())
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct Contributor {
     login: String,
     r#type: String,
@@ -94,4 +94,16 @@ async fn get_repo_contributors(user: &str, repo: &str) -> Result<Vec<Contributor
         .send()
         .await?;
     parse_response(response).await
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+pub struct Output {
+    info: Info,
+    contributors: Vec<Contributor>,
+}
+
+pub async fn query(user: &str, repo: &str) -> Result<Output> {
+    let info = get_repo_info(user, repo).await?;
+    let contributors = get_repo_contributors(user, repo).await?;
+    Ok(Output { info, contributors })
 }
