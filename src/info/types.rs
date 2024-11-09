@@ -136,7 +136,7 @@ pub async fn query(user: &str, repo: &str) -> Result<Output> {
     .await?;
 
     let _span = span.entered();
-    let active_days = info.pushed_at.duration_since(info.created_at).as_hours() as usize / 24;
+    let active_days = active_days(info.created_at, info.pushed_at, info.updated_at);
     let contributions = contributors.iter().map(|c| c.contributions).sum();
     info!(
         active_days,
@@ -152,6 +152,18 @@ pub async fn query(user: &str, repo: &str) -> Result<Output> {
         info,
         contributors,
     })
+}
+
+fn active_days(created: Timestamp, push: Timestamp, updated: Timestamp) -> usize {
+    let duration = if push >= created {
+        push.duration_since(created).as_hours()
+    } else if updated >= created {
+        // a forked repo may have created_at time later than pushed_at
+        updated.duration_since(created).as_hours()
+    } else {
+        0
+    };
+    duration as usize / 24
 }
 
 pub fn to_json(summaries: &[Output]) -> Result<()> {
