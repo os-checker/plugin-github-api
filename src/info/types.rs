@@ -105,6 +105,7 @@ pub struct Output {
     user: String,
     repo: String,
     info: Info,
+    active_days: usize,
     contributions: usize,
     contributors: Vec<Contributor>,
 }
@@ -130,6 +131,7 @@ pub async fn query(user: &str, repo: &str) -> Result<Output> {
     Ok(Output {
         user: user.to_owned(),
         repo: repo.to_owned(),
+        active_days: info.pushed_at.duration_since(info.created_at).as_hours() / 3600,
         contributions: contributors.iter().map(|c| c.contributions).sum(),
         info,
         contributors,
