@@ -9,7 +9,7 @@ struct Info {
     /// user/repo
     full_name: String,
     owner: Owner,
-    description: String,
+    description: Option<String>,
     created_at: Timestamp,
     pushed_at: Timestamp,
     /// updated_at can be influenced by many other stuff, internally or externally (like someone
@@ -62,8 +62,8 @@ struct License {
 async fn get_repo_info() -> Result<Info> {
     let response = crate::client::github()
         .path("repos")
-        .arg("zjp-CN")
-        .arg("term-rustdoc")
+        .arg("kern-crates")
+        .arg("sparreal-os")
         .send()
         .await?;
     crate::parse_response(response).await
