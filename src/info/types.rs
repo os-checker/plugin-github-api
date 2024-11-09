@@ -176,5 +176,6 @@ pub fn to_json(summaries: &[Output]) -> Result<()> {
 }
 
 pub fn cmp(a: &Output, b: &Output) -> Ordering {
-    (b.contributions, &*a.user, &*a.user).cmp(&(a.contributions, &*b.user, &*b.user))
+    // (b.contributions, &*a.user, &*a.user).cmp(&(a.contributions, &*b.user, &*b.user))
+    (b.info.pushed_at, &*a.user, &*a.user).cmp(&(a.info.pushed_at, &*b.user, &*b.user))
 }
