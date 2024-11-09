@@ -67,8 +67,9 @@ async fn get_repo_info(user: &str, repo: &str) -> Result<Info> {
 
 #[tokio::test]
 async fn query() -> Result<()> {
-    let (user, repo) = ("os-checker", "os-checker");
+    // let (user, repo) = ("os-checker", "os-checker");
     // let (user, repo) = ("arceos-org", "arceos");
+    let (user, repo) = ("kern-crates", "sparreal-os");
     let info = get_repo_info(user, repo).await?;
     let contributors = get_repo_contributors(user, repo).await?;
     dbg!(info, contributors);
