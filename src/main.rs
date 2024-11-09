@@ -4,6 +4,7 @@ extern crate tracing;
 use eyre::{Context, ContextCompat, Result};
 
 mod client;
+mod info;
 mod logger;
 mod workflows;
 
