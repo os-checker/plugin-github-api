@@ -1,11 +1,10 @@
 #![allow(unused)]
-use std::cmp::Ordering;
-
+use super::INFO;
 use crate::{client::github, parse_response, Result, BASE_DIR};
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
-
-use super::INFO;
+use std::cmp::Ordering;
+use tracing::Instrument;
 
 #[derive(Debug, Deserialize, Serialize)]
 struct Info {
@@ -126,12 +125,20 @@ impl Output {
 }
 
 pub async fn query(user: &str, repo: &str) -> Result<Output> {
-    let info = get_repo_info(user, repo).await?;
-    let contributors = get_repo_contributors(user, repo).await?;
+    let span = error_span!("Info", user, repo);
+
+    let (info, contributors) = async move {
+        let info = get_repo_info(user, repo).await?;
+        let contributors = get_repo_contributors(user, repo).await?;
+        eyre::Ok((info, contributors))
+    }
+    .instrument(span)
+    .await?;
+
     Ok(Output {
         user: user.to_owned(),
         repo: repo.to_owned(),
-        active_days: info.pushed_at.duration_since(info.created_at).as_hours() / 3600,
+        active_days: info.pushed_at.duration_since(info.created_at).as_hours() as usize / 3600,
         contributions: contributors.iter().map(|c| c.contributions).sum(),
         info,
         contributors,
