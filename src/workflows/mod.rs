@@ -6,6 +6,8 @@ pub use output::Workflows;
 mod summary;
 pub use summary::{to_json, Summary};
 
+const WORKFLOWS: &str = "workflows";
+
 use crate::Result;
 use futures::{stream, StreamExt, TryStreamExt};
 

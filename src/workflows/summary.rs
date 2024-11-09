@@ -1,6 +1,7 @@
 use super::{
     output::{Workflow, Workflows},
     types::{duration_sec, HeadCommit},
+    WORKFLOWS,
 };
 use crate::{Result, BASE_DIR};
 use indexmap::IndexMap;
@@ -105,7 +106,7 @@ impl Summary {
 }
 
 pub fn to_json(summaries: &[Summary]) -> Result<()> {
-    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, "summaries.json"]);
+    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, WORKFLOWS, "summaries.json"]);
 
     let writer = std::fs::File::create(path)?;
     serde_json::to_writer_pretty(writer, summaries)?;
