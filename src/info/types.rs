@@ -132,14 +132,23 @@ pub async fn query(user: &str, repo: &str) -> Result<Output> {
         let contributors = get_repo_contributors(user, repo).await?;
         eyre::Ok((info, contributors))
     }
-    .instrument(span)
+    .instrument(span.clone())
     .await?;
+
+    let _span = span.entered();
+    let active_days = info.pushed_at.duration_since(info.created_at).as_hours() as usize / 24;
+    let contributions = contributors.iter().map(|c| c.contributions).sum();
+    info!(
+        active_days,
+        contributions,
+        contributors = contributors.len()
+    );
 
     Ok(Output {
         user: user.to_owned(),
         repo: repo.to_owned(),
-        active_days: info.pushed_at.duration_since(info.created_at).as_hours() as usize / 3600,
-        contributions: contributors.iter().map(|c| c.contributions).sum(),
+        active_days,
+        contributions,
         info,
         contributors,
     })
