@@ -1,0 +1,99 @@
+{
+  "name": "main",
+  "commit": {
+    "sha": "9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+    "node_id": "C_kwDOMWlHo9oAKDliNDk3MmVhNzIyNWMzYzZiNmUwNzA1ZGI4YTNiOWM1YzM1NzZlNmI",
+    "commit": {
+      "author": {
+        "name": "zjp",
+        "email": "jiping_zhou@foxmail.com",
+        "date": "2024-11-08T08:11:32Z"
+      },
+      "committer": {
+        "name": "zjp",
+        "email": "jiping_zhou@foxmail.com",
+        "date": "2024-11-08T08:11:32Z"
+      },
+      "message": "chore(ci): remove secrets.SSH_PRIVATE_KEY_GITEE",
+      "tree": {
+        "sha": "37191f2c0e1cf531df21462361d9ed401a910390",
+        "url": "https://api.github.com/repos/os-checker/os-checker/git/trees/37191f2c0e1cf531df21462361d9ed401a910390"
+      },
+      "url": "https://api.github.com/repos/os-checker/os-checker/git/commits/9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/os-checker/os-checker/commits/9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+    "html_url": "https://github.com/os-checker/os-checker/commit/9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b",
+    "comments_url": "https://api.github.com/repos/os-checker/os-checker/commits/9b4972ea7225c3c6b6e0705db8a3b9c5c3576e6b/comments",
+    "author": {
+      "login": "zjp-CN",
+      "id": 25300418,
+      "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "html_url": "https://github.com/zjp-CN",
+      "followers_url": "https://api.github.com/users/zjp-CN/followers",
+      "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+      "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+      "repos_url": "https://api.github.com/users/zjp-CN/repos",
+      "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zjp-CN",
+      "id": 25300418,
+      "node_id": "MDQ6VXNlcjI1MzAwNDE4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25300418?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zjp-CN",
+      "html_url": "https://github.com/zjp-CN",
+      "followers_url": "https://api.github.com/users/zjp-CN/followers",
+      "following_url": "https://api.github.com/users/zjp-CN/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zjp-CN/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zjp-CN/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zjp-CN/subscriptions",
+      "organizations_url": "https://api.github.com/users/zjp-CN/orgs",
+      "repos_url": "https://api.github.com/users/zjp-CN/repos",
+      "events_url": "https://api.github.com/users/zjp-CN/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zjp-CN/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+        "url": "https://api.github.com/repos/os-checker/os-checker/commits/fa6e82947d3ae60ef3dafb03934f3412c7963f83",
+        "html_url": "https://github.com/os-checker/os-checker/commit/fa6e82947d3ae60ef3dafb03934f3412c7963f83"
+      }
+    ]
+  },
+  "_links": {
+    "self": "https://api.github.com/repos/os-checker/os-checker/branches/main",
+    "html": "https://github.com/os-checker/os-checker/tree/main"
+  },
+  "protected": true,
+  "protection": {
+    "enabled": false,
+    "required_status_checks": {
+      "enforcement_level": "off",
+      "contexts": [],
+      "checks": []
+    }
+  },
+  "protection_url": "https://api.github.com/repos/os-checker/os-checker/branches/main/protection"
+}
