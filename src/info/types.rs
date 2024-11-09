@@ -48,7 +48,7 @@ struct Info {
     has_discussions: bool,
 
     topics: Vec<String>,
-    language: String,
+    language: Option<String>,
     license: Option<License>,
 }
 
