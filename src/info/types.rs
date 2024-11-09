@@ -53,7 +53,7 @@ struct Info {
 struct Owner {
     /// user name
     login: String,
-    /// Organization, User or something
+    /// Organization, User, Bot or something
     r#type: String,
 }
 
