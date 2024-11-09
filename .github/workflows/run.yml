@@ -34,7 +34,7 @@ jobs:
 
       - name: Run plugin-github-api
         run: |
-          os-checker-plugin-github-api demo_jsons/list.json
+          os-checker-plugin-github-api # demo_jsons/list.json
           tree --gitignore -h tmp
 
       - name: Push to database
