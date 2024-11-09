@@ -1,4 +1,6 @@
 #![allow(unused)]
+use std::cmp::Ordering;
+
 use crate::{client::github, parse_response, Result, BASE_DIR};
 use jiff::Timestamp;
 use serde::{Deserialize, Serialize};
@@ -103,6 +105,7 @@ pub struct Output {
     user: String,
     repo: String,
     info: Info,
+    contributions: usize,
     contributors: Vec<Contributor>,
 }
 
@@ -127,7 +130,21 @@ pub async fn query(user: &str, repo: &str) -> Result<Output> {
     Ok(Output {
         user: user.to_owned(),
         repo: repo.to_owned(),
+        contributions: contributors.iter().map(|c| c.contributions).sum(),
         info,
         contributors,
     })
+}
+
+pub fn to_json(summaries: &[Output]) -> Result<()> {
+    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, INFO, "summaries.json"]);
+
+    let writer = std::fs::File::create(path)?;
+    serde_json::to_writer_pretty(writer, summaries)?;
+
+    Ok(())
+}
+
+pub fn cmp(a: &Output, b: &Output) -> Ordering {
+    (b.contributions, &*a.user, &*a.user).cmp(&(a.contributions, &*b.user, &*b.user))
 }

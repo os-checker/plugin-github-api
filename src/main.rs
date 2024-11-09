@@ -22,6 +22,7 @@ async fn main() -> Result<()> {
     let list = read_list(list_json.into())?;
 
     workflows::query(&list).await?;
+    info::query(&list).await?;
 
     Ok(())
 }
