@@ -5,6 +5,9 @@ edition = "2021"
 exclude = [".github", "demo_jsons"]
 license = "MIT"
 repository = "https://github.com/os-checker/plugin-github-api"
+description = """
+A plugin for os-checker to generate information based on github api to checked repositories.
+"""
 
 [dependencies]
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
