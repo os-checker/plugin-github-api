@@ -1,7 +1,7 @@
 use super::{types::*, WORKFLOWS};
 use crate::{Result, BASE_DIR};
 use futures::{stream, StreamExt, TryStreamExt};
-use serde::{Deserialize, Serialize};
+use plugin::prelude::*;
 use tracing::Instrument;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -73,7 +73,7 @@ impl Workflows {
     }
 
     pub fn to_json(&self) -> Result<()> {
-        let mut path = camino::Utf8PathBuf::from_iter([BASE_DIR, WORKFLOWS, &self.user]);
+        let mut path = Utf8PathBuf::from_iter([BASE_DIR, WORKFLOWS, &self.user]);
         std::fs::create_dir_all(&path)?;
 
         path.push(&self.repo);

@@ -1,11 +1,10 @@
 #[macro_use]
 extern crate tracing;
 
-use eyre::{Context, ContextCompat, Result};
+use plugin::{logger, prelude::*};
 
 mod client;
 mod info;
-mod logger;
 mod workflows;
 
 const BASE_DIR: &str = "tmp";
@@ -27,8 +26,9 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
+// FIXME: move this function to plugin crate
 // returns a list of [user, repo]
-fn read_list(path: &camino::Utf8Path) -> Result<Vec<[String; 2]>> {
+fn read_list(path: &Utf8Path) -> Result<Vec<[String; 2]>> {
     let _span = error_span!("read_list", ?path).entered();
     let bytes = std::fs::read(path)?;
     serde_json::from_reader::<_, Vec<String>>(&bytes[..])
