@@ -23,6 +23,7 @@ env:
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
 
@@ -49,7 +50,6 @@ jobs:
           tree --gitignore -h github-api
 
       - name: Push to database
-        permissions: write-all
         env:
           PLUGIN_PATH: plugin/github-api
         run: |
