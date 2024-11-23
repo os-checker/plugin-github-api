@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate tracing;
 
-use plugin::{logger, prelude::*};
+use plugin::{logger, prelude::*, repos};
 
 mod client;
 mod info;
@@ -13,12 +13,7 @@ const BASE_DIR: &str = "tmp";
 async fn main() -> Result<()> {
     logger::init();
 
-    let args: Vec<_> = std::env::args().collect();
-    // os-checker-plugin-github-api list.json
-    // if the first argument (json path) is not given, it defaults to list.json.
-    let list_json = args.get(1).map(|s| &**s).unwrap_or("list.json");
-
-    let list = read_list(list_json.into())?;
+    let list = read_list()?;
 
     workflows::query(&list).await?;
     info::query(&list).await?;
@@ -28,11 +23,8 @@ async fn main() -> Result<()> {
 
 // FIXME: move this function to plugin crate
 // returns a list of [user, repo]
-fn read_list(path: &Utf8Path) -> Result<Vec<[String; 2]>> {
-    let _span = error_span!("read_list", ?path).entered();
-    let bytes = std::fs::read(path)?;
-    serde_json::from_reader::<_, Vec<String>>(&bytes[..])
-        .with_context(|| "Expected a list of string `user/repo`.")?
+fn read_list() -> Result<Vec<[String; 2]>> {
+    repos()?
         .iter()
         .map(|s| {
             let (user, repo) = s
