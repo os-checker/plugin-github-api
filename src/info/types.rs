@@ -1,8 +1,7 @@
 #![allow(unused)]
 use super::INFO;
-use crate::{client::github, parse_response, Result, BASE_DIR};
-use jiff::Timestamp;
-use serde::{Deserialize, Serialize};
+use crate::{client::github, parse_response, BASE_DIR};
+use plugin::prelude::*;
 use std::cmp::Ordering;
 use tracing::Instrument;
 
@@ -71,7 +70,7 @@ async fn get_repo_info(user: &str, repo: &str) -> Result<Info> {
 }
 
 #[tokio::test]
-async fn query() -> Result<()> {
+async fn do_query() -> Result<()> {
     // let (user, repo) = ("os-checker", "os-checker");
     // let (user, repo) = ("arceos-org", "arceos");
     let (user, repo) = ("kern-crates", "sparreal-os");
@@ -111,7 +110,7 @@ pub struct Output {
 
 impl Output {
     pub fn to_json(&self) -> Result<()> {
-        let mut path = camino::Utf8PathBuf::from_iter([BASE_DIR, INFO, &self.user]);
+        let mut path = Utf8PathBuf::from_iter([BASE_DIR, INFO, &self.user]);
         std::fs::create_dir_all(&path)?;
 
         path.push(&self.repo);
@@ -167,7 +166,7 @@ fn active_days(created: Timestamp, push: Timestamp, updated: Timestamp) -> usize
 }
 
 pub fn to_json(summaries: &[Output]) -> Result<()> {
-    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, INFO, "summaries.json"]);
+    let path = Utf8PathBuf::from_iter([BASE_DIR, INFO, "summaries.json"]);
 
     let writer = std::fs::File::create(path)?;
     serde_json::to_writer_pretty(writer, summaries)?;

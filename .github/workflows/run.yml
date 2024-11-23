@@ -15,6 +15,7 @@ env:
   DATABASE: main
   BOT: 1
   TAG_REPOS_DEFAULT: cache-v8.redb
+  OS_CHECKER_CONFIGS: repos-default.json repos-ui.json
 
 jobs:
   run:
@@ -25,9 +26,16 @@ jobs:
       - name: Generate list.json
         run: |
           wget https://github.com/os-checker/database/releases/download/${{ env.TAG_REPOS_DEFAULT }}/repos-default.json
-          jq 'to_entries | map(.key) + ["os-checker/os-checker", "os-checker/os-checker.github.io"]' repos-default.json > list.json
+          wget https://raw.githubusercontent.com/os-checker/os-checker/refs/heads/main/assets/repos-ui.json
+          # jq 'to_entries | map(.key) + ["os-checker/os-checker", "os-checker/os-checker.github.io"]' repos-default.json > list.json
           tree --help
           tree --gitignore -h
+
+      - name: Install os-checker
+        run: |
+          wget https://github.com/os-checker/database/releases/download/precompiled-checkers/os-checker -O ~/.cargo/bin/os-checker
+          chmod +x ~/.cargo/bin/os-checker
+          os-checker config --list-repos
 
       - name: Install plugin-github-api
         run: cargo install --path .

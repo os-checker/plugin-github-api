@@ -9,19 +9,11 @@ futures = "0.3"
 
 github_v3 = "1"
 # reqwest = "0.12.8"
-jiff = { version = "0.1", features = ["serde"] }
-serde = { version = "1", features = ["derive"] }
-serde_json = { version = "1", features = ["preserve_order"] }
 
-camino = "1"
-indexmap = "2"
+plugin = { version = "0.1.3", package = "os-checker-plugin" }
+serde = "1"
 
 # error handling
 eyre = "0.6"
-color-eyre = "0.6"
-
 # logger
 tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-tracing-error = "0.2"
-

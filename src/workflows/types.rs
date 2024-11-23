@@ -2,8 +2,7 @@
 
 use crate::{client::github, Result};
 use github_v3::Builder;
-use jiff::Timestamp;
-use serde::{Deserialize, Serialize};
+use plugin::prelude::*;
 use tracing::Instrument;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]

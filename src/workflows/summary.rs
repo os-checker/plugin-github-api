@@ -3,10 +3,8 @@ use super::{
     types::{duration_sec, HeadCommit},
     WORKFLOWS,
 };
-use crate::{Result, BASE_DIR};
-use indexmap::IndexMap;
-use jiff::Timestamp;
-use serde::{Deserialize, Serialize};
+use crate::BASE_DIR;
+use plugin::prelude::*;
 use std::cmp::Ordering;
 
 /// Latest workflow is the latest updated (first) & latest created (second) workflow.
@@ -106,7 +104,7 @@ impl Summary {
 }
 
 pub fn to_json(summaries: &[Summary]) -> Result<()> {
-    let path = camino::Utf8PathBuf::from_iter([BASE_DIR, WORKFLOWS, "summaries.json"]);
+    let path = Utf8PathBuf::from_iter([BASE_DIR, WORKFLOWS, "summaries.json"]);
 
     let writer = std::fs::File::create(path)?;
     serde_json::to_writer_pretty(writer, summaries)?;
