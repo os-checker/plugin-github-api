@@ -49,6 +49,7 @@ jobs:
           tree --gitignore -h github-api
 
       - name: Push to database
+        permissions: write-all
         env:
           PLUGIN_PATH: plugin/github-api
         run: |
