@@ -6,9 +6,11 @@ on:
   push:
     branches: [ main, feat/* ]
 
+permissions: read-all
+
 env:
   CARGO_TERM_COLOR: always
-  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  # GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   RUST_LOG: info
   # database branch
