@@ -9,7 +9,7 @@ on:
 env:
   CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  # GITHUB_TOKEN: ${{ github.token }}
   RUST_LOG: info
   # database branch
   DATABASE: main
@@ -20,6 +20,7 @@ env:
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
 
@@ -43,7 +44,7 @@ jobs:
       - name: Run plugin-github-api
         run: |
           os-checker-plugin-github-api # demo_jsons/list.json
-          tree --gitignore -h tmp
+          tree --gitignore -h github-api
 
       - name: Push to database
         env:
@@ -55,15 +56,13 @@ jobs:
           git config --global committer.email "zjp-CN[bot]@users.noreply.github.com"
 
           echo "正在 clone os-checker/database"
-          git clone https://x-access-token:${{ env.ACCESS_TOKEN }}@github.com/os-checker/database.git
+          git clone https://x-access-token:${{ env.GITHUB_TOKEN }}@github.com/os-checker/database.git
           echo "成功 clone os-checker/database"
 
           cd database
           git switch ${{ env.DATABASE }}
 
           rm -rf ${{ env.PLUGIN_PATH }}
-          mv ../tmp ${{ env.PLUGIN_PATH }}
-          cp ../demo_jsons/push.sh ${{ env.PLUGIN_PATH }}
-
-          bash ${{ env.PLUGIN_PATH }}/push.sh
-
+          mkdir -p plugin
+          mv ../github-api plugin
+          bash ../demo_jsons/push.sh

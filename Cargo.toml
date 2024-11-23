@@ -2,6 +2,12 @@
 name = "os-checker-plugin-github-api"
 version = "0.1.0"
 edition = "2021"
+exclude = [".github", "demo_jsons"]
+license = "MIT"
+repository = "https://github.com/os-checker/plugin-github-api"
+description = """
+A plugin for os-checker to generate information based on github api to checked repositories.
+"""
 
 [dependencies]
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
@@ -17,3 +23,8 @@ serde = "1"
 eyre = "0.6"
 # logger
 tracing = "0.1"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
