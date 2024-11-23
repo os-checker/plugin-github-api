@@ -31,6 +31,12 @@ jobs:
           tree --help
           tree --gitignore -h
 
+      - name: Install os-checker
+        run: |
+          wget https://github.com/os-checker/database/releases/download/precompiled-checkers/os-checker -O ~/.cargo/bin/os-checker
+          chmod +x ~/.cargo/bin/os-checker
+          os-checker config --list-repos
+
       - name: Install plugin-github-api
         run: cargo install --path .
 
