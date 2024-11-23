@@ -7,7 +7,7 @@ mod client;
 mod info;
 mod workflows;
 
-const BASE_DIR: &str = "tmp";
+const BASE_DIR: &str = "github-api";
 
 #[tokio::main]
 async fn main() -> Result<()> {
