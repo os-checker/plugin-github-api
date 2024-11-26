@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate list.json
         run: |
-          wget https://github.com/os-checker/database/releases/download/${{ env.TAG_REPOS_DEFAULT }}/repos-default.json
+          gh release download -R kern-crates/.github -p os-checker_config.json -O repos-default.json
           wget https://raw.githubusercontent.com/os-checker/os-checker/refs/heads/main/assets/repos-ui.json
           # jq 'to_entries | map(.key) + ["os-checker/os-checker", "os-checker/os-checker.github.io"]' repos-default.json > list.json
           tree --help
