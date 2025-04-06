@@ -71,13 +71,21 @@ impl Summary {
         let created_at = run.created_at;
         let updated_at = run.updated_at;
 
+        // only keep the first run name because repeated run names exist for the
+        // same sha due to scheduling
+        let unique_name = {
+            let mut v = wf.to_vec();
+            v.sort_by_key(|w| w.run.name.as_str());
+            v.dedup_by_key(|w| w.run.name.as_str());
+            v
+        };
         summary.last = Some(LastWorkflow {
             created_at,
             updated_at,
             duration_sec: duration_sec(created_at, updated_at),
             // must check all latset data
-            completed: wf.iter().all(|w| w.run.status == "completed"),
-            success: wf
+            completed: unique_name.iter().all(|w| w.run.status == "completed"),
+            success: unique_name
                 .iter()
                 .all(|w| w.run.conclusion.as_deref() == Some("success")),
             head_branch: run.head_branch.clone(),
